@@ -79,3 +79,4 @@
 #OSX .DS_Store
 .DS_Store
 /_Out/NFDataCfg/proto
+.idea/workspace.xml
