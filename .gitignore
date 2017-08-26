@@ -44,6 +44,8 @@
 /Dependencies/lib
 /Dependencies/boost_1_53_0
 /Dependencies/curl-7.37.1
+/Dependencies/protobuf
+
 /Temp
 /NoahFrame.v11.suo
 /NoahFrame.opensdf
@@ -67,6 +69,9 @@
 /_Out/Server/NFDataCfg/Struct/
 /_Out/Server/NFDataCfg/Proto/
 #/_Out/Server/Release/
+/_Out/Debug/*_d
+/_Out/NFDataCfg
+/_Out/Release/NFPluginLoader
 
 #/_Out/Server/Debug/*
 /Dependencies/libevent
