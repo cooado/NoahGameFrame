@@ -40,7 +40,7 @@ public:
     virtual bool AfterInit();
 
 private:
-	void OnClienChatProcess(const int nSockIndex, const int nMsgID, const char* msg, const uint32_t nLen);
+	void OnClienChatProcess(const NFSOCK nSockIndex, const int nMsgID, const char* msg, const uint32_t nLen);
 
 protected:
 
@@ -53,6 +53,6 @@ protected:
 	NFIEventModule* m_pEventModule;
 	NFISceneAOIModule* m_pSceneAOIModule;
 	NFIGameServerNet_ServerModule* m_pGameServerNet_ServerModule;
-	NFIGameServerToWorldModule* m_pNetClientModule;
+	NFIGameServerToWorldModule* m_pGameServerToWorldModule;
 };
 #endif

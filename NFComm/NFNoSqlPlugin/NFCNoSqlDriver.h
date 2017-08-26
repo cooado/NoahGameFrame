@@ -9,7 +9,14 @@
 #ifndef NFC_DATABASEDRIVER_H
 #define NFC_DATABASEDRIVER_H
 
+#ifdef _MSC_VER
+#pragma warning(disable: 4244 4267 4101 4390)
+#endif
 #include "Dependencies/redis-cplusplus-client/redisclient.h"
+#ifdef _MSC_VER
+#pragma warning(default: 4244 4267 4101 4390)
+#endif
+
 #include "NFComm/NFPluginModule/NFINoSqlModule.h"
 
 class  NFCNoSqlDriver : public NFINoSqlDriver
@@ -58,7 +65,7 @@ public:
 
 	/////////////
 	
-	virtual const bool ZAdd(const std::string& strKey, const double nScore, const std::string& strData);
+	virtual const bool ZAdd(const std::string& strKey, const double nScore, const std::string& strMember);
 	virtual const bool ZIncrBy(const std::string& strKey, const std::string& strMember, const double nIncrement);
 	
 	virtual const bool ZRem(const std::string& strKey, const std::string& strMember);

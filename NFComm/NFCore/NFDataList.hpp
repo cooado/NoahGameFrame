@@ -144,7 +144,41 @@ public:
 
 	void Reset()
 	{
-		nType = TDATA_UNKNOWN;
+		switch (GetType())
+		{
+			case TDATA_INT:
+			{
+				SetInt(0);
+			}
+				break;
+			case TDATA_FLOAT:
+			{
+				SetFloat(0);
+			}
+				break;
+			case TDATA_STRING:
+			{
+				SetString("");
+			}
+				break;
+			case TDATA_OBJECT:
+			{
+				SetObject(NFGUID());
+			}
+				break;
+			case TDATA_VECTOR2:
+			{
+				SetVector2(NFVector2());
+			}
+				break;
+			case TDATA_VECTOR3:
+			{
+				SetVector3(NFVector3());
+			}
+				break;
+			default:
+				break;
+		}
 	}
 
 	bool IsNullValue() const
@@ -279,6 +313,17 @@ public:
 		}
 
 		return NULL_INT;
+	}
+
+	int GetInt32() const
+	{
+		if (TDATA_INT == nType)
+		{
+			//return boost::get<NFINT64>(variantData);
+			return (int)variantData.get<NFINT64>();
+		}
+
+		return (int)NULL_INT;
 	}
 
 	double GetFloat() const
@@ -884,6 +929,11 @@ public:
 		}
 
 		return 0;
+	}
+
+	inline int Int32(const int index) const
+	{
+		return (int) Int(index);
 	}
 
 	virtual double Float(const int index) const

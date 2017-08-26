@@ -24,7 +24,7 @@
 #include "NFComm/NFPluginModule/NFPlatform.h"
 #include "NFComm/NFCore/NFVector3.hpp"
 
-/** °²È«µÄÊÍ·ÅÒ»¸öÖ¸ÕëÄÚ´æ */
+/** å®‰å…¨çš„é‡Šæ”¾ä¸€ä¸ªæŒ‡é’ˆå†…å­˜ */
 #define SAFE_RELEASE(i)										\
 	if (i)													\
 		{													\
@@ -32,7 +32,7 @@
 			i = NULL;										\
 		}
 
-/** °²È«µÄÊÍ·ÅÒ»¸öÖ¸ÕëÊý×éÄÚ´æ */
+/** å®‰å…¨çš„é‡Šæ”¾ä¸€ä¸ªæŒ‡é’ˆæ•°ç»„å†…å­˜ */
 #define SAFE_RELEASE_ARRAY(i)								\
 	if (i)													\
 		{													\
@@ -167,7 +167,7 @@ public:
 		{
 			NFVector3 currpos;
 
-			for (uint32_t i = 0; i < max_points; i++)
+			for (int i = 0; i < max_points; i++)
 			{
 				float pt[3];
 				dtPolyRef ref;
@@ -209,9 +209,9 @@ public:
 
 		while (itry++ < 3 && points.size() == 0)
 		{
-			max_points -= points.size();
+			max_points -= (int)points.size();
 
-			for (uint32_t i = 0; i < max_points; i++)
+			for (int i = 0; i < max_points; i++)
 			{
 				float pt[3];
 				dtPolyRef ref;
@@ -310,7 +310,7 @@ public:
 		if (!fp)
 		{
 			printf("NFCNavigationHandle::create: open({%s}) is error!\n", resPath.c_str());
-			return false;
+			return NULL;
 		}
 
 		printf("NFCNavigationHandle::create: ({%s}), layer={%d}\n", resPath.c_str(), 0);
@@ -326,21 +326,21 @@ public:
 		uint8_t* data = new uint8_t[flen];
 		if (data == NULL)
 		{
-			printf("NFCNavigationHandle::create: open({%s}), memory(size={%d}) error!\n", resPath.c_str(), flen);
+			printf("NFCNavigationHandle::create: open({%s}), memory(size={%d}) error!\n", resPath.c_str(), (int)flen);
 
 			fclose(fp);
 			SAFE_RELEASE_ARRAY(data);
-			return false;
+			return NULL;
 		}
 
 		size_t readsize = fread(data, 1, flen, fp);
 		if (readsize != flen)
 		{
-			printf("NFCNavigationHandle::create: open({%s}), read(size={%d} != {%d}) error!\n", resPath.c_str(), readsize, flen);
+			printf("NFCNavigationHandle::create: open({%s}), read(size={%d} != {%d}) error!\n", resPath.c_str(), (int)readsize, (int)flen);
 
 			fclose(fp);
 			SAFE_RELEASE_ARRAY(data);
-			return false;
+			return NULL;
 		}
 
 		if (readsize < sizeof(NavMeshSetHeader))
@@ -349,7 +349,7 @@ public:
 
 			fclose(fp);
 			SAFE_RELEASE_ARRAY(data);
-			return false;
+			return NULL;
 		}
 
 		NavMeshSetHeader header;
@@ -363,7 +363,7 @@ public:
 
 			fclose(fp);
 			SAFE_RELEASE_ARRAY(data);
-			return false;
+			return NULL;
 		}
 
 		dtNavMesh* mesh = dtAllocNavMesh();
@@ -372,7 +372,7 @@ public:
 			printf("NavMeshHandle::create: dtAllocNavMesh is failed!\n");
 			fclose(fp);
 			SAFE_RELEASE_ARRAY(data);
-			return false;
+			return NULL;
 		}
 
 		dtStatus status = mesh->init(&header.params);
@@ -381,7 +381,7 @@ public:
 			printf("NFCNavigationHandle::create: mesh init is error({%d})!\n", status);
 			fclose(fp);
 			SAFE_RELEASE_ARRAY(data);
-			return false;
+			return NULL;
 		}
 
 		// Read tiles.
@@ -432,7 +432,7 @@ public:
 		{
 			printf("NavMeshHandle::create:  error({%d})!\n", status);
 			dtFreeNavMesh(mesh);
-			return false;
+			return NULL;
 		}
 
 		NF_SHARE_PTR<NFCNavigationHandle> pNavMeshHandle = NF_SHARE_PTR<NFCNavigationHandle>(NF_NEW NFCNavigationHandle());
@@ -452,7 +452,7 @@ public:
 		uint32_t dataSize = 0;
 
 		const dtNavMesh* navmesh = mesh;
-		for (uint32_t i = 0; i < navmesh->getMaxTiles(); ++i)
+		for (int i = 0; i < navmesh->getMaxTiles(); ++i)
 		{
 			const dtMeshTile* tile = navmesh->getTile(i);
 			if (!tile || !tile->header)

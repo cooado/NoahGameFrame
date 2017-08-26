@@ -34,7 +34,7 @@ bool NFCPropertyConfigModule::AfterInit()
     return true;
 }
 
-int NFCPropertyConfigModule::CalculateBaseValue(const int nJob, const int nLevel, const std::string& strProperty)
+NFINT64 NFCPropertyConfigModule::CalculateBaseValue(const int nJob, const int nLevel, const std::string& strProperty)
 {
 	NF_SHARE_PTR <NFMapEx<int, std::string> > xPropertyMap = mhtCoefficienData.GetElement(nJob);
 	if (xPropertyMap)
@@ -62,8 +62,8 @@ void NFCPropertyConfigModule::Load()
             NF_SHARE_PTR<NFIPropertyManager> pPropertyManager = m_pElementModule->GetPropertyManager(strId);
             if (pPropertyManager)
             {
-                int nJob = m_pElementModule->GetPropertyInt(strId, NFrame::InitProperty::Job());
-                int nLevel = m_pElementModule->GetPropertyInt(strId, NFrame::InitProperty::Level());
+                int nJob = m_pElementModule->GetPropertyInt32(strId, NFrame::InitProperty::Job());
+                int nLevel = m_pElementModule->GetPropertyInt32(strId, NFrame::InitProperty::Level());
                 std::string strEffectData = m_pElementModule->GetPropertyString(strId, NFrame::InitProperty::EffectData());
 
 				NF_SHARE_PTR <NFMapEx<int, std::string> > xPropertyMap = mhtCoefficienData.GetElement(nJob);
@@ -71,14 +71,15 @@ void NFCPropertyConfigModule::Load()
 				{
 					xPropertyMap = NF_SHARE_PTR<NFMapEx<int, std::string>>(NF_NEW NFMapEx<int, std::string>());
 					mhtCoefficienData.AddElement(nJob, xPropertyMap);
-
-					NF_SHARE_PTR<std::string> xRefPropertyIDName = xPropertyMap->GetElement(nLevel);
-					if (!xRefPropertyIDName)
-					{
-						xRefPropertyIDName = NF_SHARE_PTR<std::string>(NF_NEW std::string(strEffectData));
-						xPropertyMap->AddElement(nLevel, xRefPropertyIDName);
-					}
 				}
+
+				NF_SHARE_PTR<std::string> xRefPropertyIDName = xPropertyMap->GetElement(nLevel);
+				if (!xRefPropertyIDName)
+				{
+					xRefPropertyIDName = NF_SHARE_PTR<std::string>(NF_NEW std::string(strEffectData));
+				}
+
+				xPropertyMap->AddElement(nLevel, xRefPropertyIDName);
             }
         }
     }

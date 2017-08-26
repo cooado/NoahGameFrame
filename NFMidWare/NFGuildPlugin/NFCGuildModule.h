@@ -2,7 +2,7 @@
 //    @FileName			:    NFCGuildModle.h
 //    @Author           :    LvSheng.Huang
 //    @Date             :    2017-07-21
-//    @Module           :    NFCGuildComponent
+//    @Module           :    NFCGuildModle
 //
 // -------------------------------------------------------------------------
 
@@ -17,6 +17,7 @@
 #include "NFComm/NFPluginModule/NFINetModule.h"
 #include "NFComm/NFPluginModule/NFIActorModule.h"
 #include "NFComm/NFPluginModule/NFIGuildRedisModule.h"
+#include "NFComm/NFPluginModule/NFIWorldNet_ServerModule.h"
 #include "NFComm/NFPluginModule/NFIGameServerNet_ServerModule.h"
 
 class NFCGuildModule
@@ -42,11 +43,12 @@ protected:
 
 protected:
 
-	void OnCreateGuildProcess(const int nSockIndex, const int nMsgID, const char* msg, const uint32_t nLen);
-	void OnJoinGuildProcess(const int nSockIndex, const int nMsgID, const char* msg, const uint32_t nLen);
-	void OnLeaveGuildProcess(const int nSockIndex, const int nMsgID, const char* msg, const uint32_t nLen);
-	void OnOprGuildMemberProcess(const int nSockIndex, const int nMsgID, const char* msg, const uint32_t nLen);
-	void OnSearchGuildProcess(const int nSockIndex, const int nMsgID, const char* msg, const uint32_t nLen);
+	void OnCreateGuildProcess(const NFSOCK nSockIndex, const int nMsgID, const char* msg, const uint32_t nLen);
+	void OnJoinGuildProcess(const NFSOCK nSockIndex, const int nMsgID, const char* msg, const uint32_t nLen);
+	void OnLeaveGuildProcess(const NFSOCK nSockIndex, const int nMsgID, const char* msg, const uint32_t nLen);
+	void OnOprGuildMemberProcess(const NFSOCK nSockIndex, const int nMsgID, const char* msg, const uint32_t nLen);
+	void OnSearchGuildProcess(const NFSOCK nSockIndex, const int nMsgID, const char* msg, const uint32_t nLen);
+	void OnClienChatProcess(const NFSOCK nSockIndex, const int nMsgID, const char* msg, const uint32_t nLen);
 
 protected:
 
@@ -58,8 +60,7 @@ protected:
 	NFINetModule* m_pNetModule;
 	NFIKernelModule* m_pKernelModule;
 	NFIGuildRedisModule* m_pGuildRedisModule;
-	NFIGameServerNet_ServerModule* m_pGameServerNet_ServerModule;
-
+	NFIWorldNet_ServerModule* m_pWorldNet_ServerModule;
 };
 
 #endif

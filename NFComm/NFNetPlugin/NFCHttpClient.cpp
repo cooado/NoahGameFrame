@@ -6,21 +6,6 @@
 ////////////////////////////////////////////
 #include "NFCHttpClient.h"
 
-#if NF_PLATFORM == NF_PLATFORM_WIN
-#include <WS2tcpip.h>
-#include <winsock2.h>
-#pragma  comment(lib,"Ws2_32.lib")
-#pragma  comment(lib,"libevent.lib")
-#pragma  comment(lib,"libevent_core.lib")
-
-#if NF_ENABLE_SSL
-#pragma  comment(lib,"libevent_openssl.lib")
-#pragma  comment(lib,"libeay32.lib")
-#pragma  comment(lib,"ssleay32.lib")
-#endif
-
-#endif
-
 
 bool NFCHttpClient::Execute()
 {
@@ -283,7 +268,7 @@ void NFCHttpClient::OnHttpReqDone(struct evhttp_request *req, void *ctx)
 		* sadly we are mostly left guessing what the error
 		* might have been.  We'll do our best... */
 		struct bufferevent *bev = (struct bufferevent *) ctx;
-		unsigned long oslerr;
+		unsigned long oslerr = 0;
 		int printed_err = 0;
 		int errcode = EVUTIL_SOCKET_ERROR();
 

@@ -9,10 +9,10 @@
 #define NFI_NET_H
 
 #include <cstring>
-#include <errno.h>
-#include <stdio.h>
-#include <signal.h>
-#include <stdint.h>
+#include <cerrno>
+#include <cstdio>
+#include <csignal>
+#include <cstdint>
 #include <iostream>
 #include <map>
 #include <vector>
@@ -20,20 +20,27 @@
 #include <memory>
 #include <list>
 #include <vector>
-#include <assert.h>
+#include <cassert>
 #include "NFComm/NFPluginModule/NFGUID.h"
 
 #if NF_PLATFORM == NF_PLATFORM_WIN
 #include <WinSock2.h>
 #include <windows.h>
 #elif NF_PLATFORM == NF_PLATFORM_APPLE || NF_PLATFORM == NF_PLATFORM_LINUX || NF_PLATFORM == NF_PLATFORM_ANDROID
-//#include <libkern/OSByteOrder.h>
+
+#if NF_PLATFORM == NF_PLATFORM_APPLE
+#include <libkern/OSByteOrder.h>
+#endif
+
 #include <netinet/in.h>
+
 #ifdef _XOPEN_SOURCE_EXTENDED
 #  include <arpa/inet.h>
 # endif
+
 #include <sys/socket.h>
 #include <unistd.h>
+
 #endif
 
 
@@ -67,10 +74,8 @@ struct  NFIMsgHead
     int64_t NF_HTONLL(int64_t nData)
     {
 #if NF_PLATFORM == NF_PLATFORM_WIN
-//#ifdef _MSC_VER
         return htonll(nData);
 #elif NF_PLATFORM == NF_PLATFORM_APPLE || NF_PLATFORM == NF_PLATFORM_APPLE_IOS
-//#elseifdef __APPLE_CC__
         return OSSwapHostToBigInt64(nData);
 #else
         return htobe64(nData);
@@ -80,10 +85,8 @@ struct  NFIMsgHead
     int64_t NF_NTOHLL(int64_t nData)
     {
 #if NF_PLATFORM == NF_PLATFORM_WIN
-//#ifdef _MSC_VER
         return ntohll(nData);
 #elif NF_PLATFORM == NF_PLATFORM_APPLE || NF_PLATFORM == NF_PLATFORM_APPLE_IOS
-//#elseifdef __APPLE__
         return OSSwapBigToHostInt64(nData);
 #elif NF_PLATFORM == NF_PLATFORM_ANDROID
         return betoh64(nData);
@@ -95,10 +98,8 @@ struct  NFIMsgHead
     int32_t NF_HTONL(int32_t nData)
     {
 #if NF_PLATFORM == NF_PLATFORM_WIN
-//#ifdef _MSC_VER
         return htonl(nData);
 #elif NF_PLATFORM == NF_PLATFORM_APPLE || NF_PLATFORM == NF_PLATFORM_APPLE_IOS
-//#elseifdef __APPLE__
         return OSSwapHostToBigInt32(nData);
 #else
         return htobe32(nData);
@@ -108,10 +109,8 @@ struct  NFIMsgHead
     int32_t NF_NTOHL(int32_t nData)
     {
 #if NF_PLATFORM == NF_PLATFORM_WIN
-//#ifdef _MSC_VER
         return ntohl(nData);
 #elif NF_PLATFORM == NF_PLATFORM_APPLE || NF_PLATFORM == NF_PLATFORM_APPLE_IOS
-//#elseifdef __APPLE__
         return OSSwapBigToHostInt32(nData);
 #elif NF_PLATFORM == NF_PLATFORM_ANDROID
         return betoh32(nData);
@@ -123,10 +122,8 @@ struct  NFIMsgHead
     int16_t NF_HTONS(int16_t nData)
     {
 #if NF_PLATFORM == NF_PLATFORM_WIN
-//#ifdef _MSC_VER
         return htons(nData);
 #elif NF_PLATFORM == NF_PLATFORM_APPLE || NF_PLATFORM == NF_PLATFORM_APPLE_IOS
-//#elseifdef __APPLE__
         return OSSwapHostToBigInt16(nData);
 #else
         return htobe16(nData);
@@ -136,10 +133,8 @@ struct  NFIMsgHead
     int16_t NF_NTOHS(int16_t nData)
     {
 #if NF_PLATFORM == NF_PLATFORM_WIN
-//#ifdef _MSC_VER
         return ntohs(nData);
 #elif NF_PLATFORM == NF_PLATFORM_APPLE || NF_PLATFORM == NF_PLATFORM_APPLE_IOS
-//#elseifdef __APPLE__
         return OSSwapBigToHostInt16(nData);
 #elif NF_PLATFORM == NF_PLATFORM_ANDROID
         return betoh16 (nData);
@@ -227,11 +222,10 @@ protected:
 };
 
 class NFINet;
-
-typedef std::function<void(const int nSockIndex, const int nMsgID, const char* msg, const uint32_t nLen)> NET_RECEIVE_FUNCTOR;
+typedef std::function<void(const NFSOCK nSockIndex, const int nMsgID, const char* msg, const uint32_t nLen)> NET_RECEIVE_FUNCTOR;
 typedef std::shared_ptr<NET_RECEIVE_FUNCTOR> NET_RECEIVE_FUNCTOR_PTR;
 
-typedef std::function<void(const int nSockIndex, const NF_NET_EVENT nEvent, NFINet* pNet)> NET_EVENT_FUNCTOR;
+typedef std::function<void(const NFSOCK nSockIndex, const NF_NET_EVENT nEvent, NFINet* pNet)> NET_EVENT_FUNCTOR;
 typedef std::shared_ptr<NET_EVENT_FUNCTOR> NET_EVENT_FUNCTOR_PTR;
 
 typedef std::function<void(int severity, const char* msg)> NET_EVENT_LOG_FUNCTOR;
@@ -240,7 +234,7 @@ typedef std::shared_ptr<NET_EVENT_LOG_FUNCTOR> NET_EVENT_LOG_FUNCTOR_PTR;
 class NetObject
 {
 public:
-    NetObject(NFINet* pNet, int32_t fd, sockaddr_in& addr, struct bufferevent* pBev)
+    NetObject(NFINet* pNet, NFSOCK fd, sockaddr_in& addr, struct bufferevent* pBev)
     {
         mnLogicState = 0;
         mnGameID = 0;
@@ -260,10 +254,16 @@ public:
 
     int AddBuff(const char* str, uint32_t nLen)
     {
-        mstrBuff.append(str, nLen);
+        mstrBuff.append(str, (size_t)nLen);
 
         return (int)mstrBuff.length();
     }
+	int AddBuff(const char* str, size_t nLen)
+	{
+		mstrBuff.append(str, nLen);
+
+		return (int)mstrBuff.length();
+	}
 
     int CopyBuffTo(char* str, uint32_t nStart, uint32_t nLen)
     {
@@ -291,7 +291,7 @@ public:
 
         mstrBuff.erase(nStart, nLen);
 
-        return mstrBuff.length();
+        return (int) mstrBuff.length();
     }
 
     const char* GetBuff()
@@ -301,7 +301,7 @@ public:
 
     int GetBuffLen() const
     {
-        return mstrBuff.length();
+        return (int) mstrBuff.length();
     }
 
     bufferevent* GetBuffEvent()
@@ -388,7 +388,7 @@ public:
         mnHashIdentID = xHashIdentID;
     }
 
-    int GetRealFD()
+    NFSOCK GetRealFD()
     {
         return nFD;
     }
@@ -407,7 +407,7 @@ private:
     NFGUID mnHashIdentID;//hash ident, special for distributed
     NFINet* m_pNet;
     //
-    int nFD;
+    NFSOCK nFD;
     bool bNeedRemove;
 };
 
@@ -426,7 +426,7 @@ public:
     virtual bool Final() = 0;
 
     //send a message with out msg-head[auto add msg-head in this function]
-    virtual bool SendMsgWithOutHead(const int16_t nMsgID, const char* msg, const uint32_t nLen, const int nSockIndex = 0) = 0;
+    virtual bool SendMsgWithOutHead(const int16_t nMsgID, const char* msg, const uint32_t nLen, const NFSOCK nSockIndex = 0) = 0;
 
     //send a message to all client[need to add msg-head for this message by youself]
     virtual bool SendMsgToAllClient(const char* msg, const uint32_t nLen) = 0;
@@ -434,9 +434,9 @@ public:
     //send a message with out msg-head to all client[auto add msg-head in this function]
     virtual bool SendMsgToAllClientWithOutHead(const int16_t nMsgID, const char* msg, const uint32_t nLen) = 0;
 
-    virtual bool CloseNetObject(const int nSockIndex) = 0;
-    virtual NetObject* GetNetObject(const int nSockIndex) = 0;
-    virtual bool AddNetObject(const int nSockIndex, NetObject* pObject) = 0;
+    virtual bool CloseNetObject(const NFSOCK nSockIndex) = 0;
+    virtual NetObject* GetNetObject(const NFSOCK nSockIndex) = 0;
+    virtual bool AddNetObject(const NFSOCK nSockIndex, NetObject* pObject) = 0;
 
     virtual bool IsServer() = 0;
 

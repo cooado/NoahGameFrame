@@ -32,7 +32,8 @@ bool NFCNPCRefreshModule::AfterInit()
     m_pSceneProcessModule = pPluginManager->FindModule<NFISceneProcessModule>();
     m_pElementModule = pPluginManager->FindModule<NFIElementModule>();
 	m_pLogModule = pPluginManager->FindModule<NFILogModule>();
-
+	m_pLevelModule = pPluginManager->FindModule<NFILevelModule>();
+	
 	m_pKernelModule->AddClassCallBack(NFrame::NPC::ThisName(), this, &NFCNPCRefreshModule::OnObjectClassEvent);
 
     return true;
@@ -52,7 +53,7 @@ int NFCNPCRefreshModule::OnObjectClassEvent( const NFGUID& self, const std::stri
         {
             const std::string& strConfigIndex = m_pKernelModule->GetPropertyString(self, NFrame::NPC::ConfigID());
 			const std::string& strEffectPropertyID = m_pElementModule->GetPropertyString(strConfigIndex, NFrame::NPC::EffectData());
-			const int nNPCType = m_pElementModule->GetPropertyInt(strConfigIndex, NFrame::NPC::NPCType());
+			const int nNPCType = m_pElementModule->GetPropertyInt32(strConfigIndex, NFrame::NPC::NPCType());
 			NF_SHARE_PTR<NFIPropertyManager> pSelfPropertyManager = pSelf->GetPropertyManager();
 
 			if (nNPCType == NFMsg::ENPCType::ENPCTYPE_NORMAL
@@ -80,9 +81,7 @@ int NFCNPCRefreshModule::OnObjectClassEvent( const NFGUID& self, const std::stri
         }
         else if ( CLASS_OBJECT_EVENT::COE_CREATE_HASDATA == eClassEvent )
         {
-            const std::string& strConfigID = m_pKernelModule->GetPropertyString(self, NFrame::NPC::ConfigID());
-            int nHPMax = m_pElementModule->GetPropertyInt(strConfigID, NFrame::NPC::MAXHP());
-
+			int nHPMax = m_pKernelModule->GetPropertyInt32(self, NFrame::NPC::MAXHP());
             m_pKernelModule->SetPropertyInt(self, NFrame::NPC::HP(), nHPMax);
 
             m_pKernelModule->AddPropertyCallBack( self, NFrame::NPC::HP(), this, &NFCNPCRefreshModule::OnObjectHPEvent );
@@ -115,8 +114,8 @@ int NFCNPCRefreshModule::OnDeadDestroyHeart( const NFGUID& self, const std::stri
     const std::string& strClassName = m_pKernelModule->GetPropertyString( self, NFrame::NPC::ClassName());
 	const std::string& strSeedID = m_pKernelModule->GetPropertyString( self, NFrame::NPC::SeedID());
 	const std::string& strConfigID = m_pKernelModule->GetPropertyString( self, NFrame::NPC::ConfigID());
-    int nSceneID = m_pKernelModule->GetPropertyInt( self, NFrame::NPC::SceneID());
-    int nGroupID = m_pKernelModule->GetPropertyInt( self, NFrame::NPC::GroupID());
+    int nSceneID = m_pKernelModule->GetPropertyInt32( self, NFrame::NPC::SceneID());
+    int nGroupID = m_pKernelModule->GetPropertyInt32( self, NFrame::NPC::GroupID());
 
 	NFVector3 fSeedPos = m_pKernelModule->GetPropertyVector3( self, NFrame::NPC::Position());
 
@@ -138,7 +137,7 @@ int NFCNPCRefreshModule::OnObjectBeKilled( const NFGUID& self, const NFEventDefi
 		NFGUID identKiller = var.Object( 0 );
 		if ( m_pKernelModule->GetObject( identKiller ) )
 		{
-			const int nExp = m_pKernelModule->GetPropertyInt( self, NFrame::Player::EXP() );
+			const int64_t nExp = m_pKernelModule->GetPropertyInt32( self, NFrame::Player::EXP() );
 
 			m_pLevelModule->AddExp( identKiller, nExp);
 
