@@ -7,6 +7,7 @@
 #include <algorithm>
 
 #include <google/protobuf/stubs/common.h>
+#include <google/protobuf/stubs/port.h>
 #include <google/protobuf/stubs/once.h>
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/wire_format_lite_inl.h>
@@ -17,264 +18,281 @@
 // @@protoc_insertion_point(includes)
 
 namespace NFMsg {
+class ReqAckBuyObjectFormShopDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<ReqAckBuyObjectFormShop>
+     _instance;
+} _ReqAckBuyObjectFormShop_default_instance_;
+class ReqAckMoveBuildObjectDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<ReqAckMoveBuildObject>
+     _instance;
+} _ReqAckMoveBuildObject_default_instance_;
+class ReqUpBuildLvDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<ReqUpBuildLv>
+     _instance;
+} _ReqUpBuildLv_default_instance_;
+class ReqCreateItemDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<ReqCreateItem>
+     _instance;
+} _ReqCreateItem_default_instance_;
+class ReqBuildOperateDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<ReqBuildOperate>
+     _instance;
+} _ReqBuildOperate_default_instance_;
+
+namespace protobuf_NFSLGDefine_2eproto {
+
 
 namespace {
 
-const ::google::protobuf::Descriptor* ReqAckBuyObjectFormShop_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  ReqAckBuyObjectFormShop_reflection_ = NULL;
-const ::google::protobuf::Descriptor* ReqAckMoveBuildObject_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  ReqAckMoveBuildObject_reflection_ = NULL;
-const ::google::protobuf::Descriptor* ReqUpBuildLv_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  ReqUpBuildLv_reflection_ = NULL;
-const ::google::protobuf::Descriptor* ReqCreateItem_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  ReqCreateItem_reflection_ = NULL;
-const ::google::protobuf::Descriptor* ReqBuildOperate_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  ReqBuildOperate_reflection_ = NULL;
-const ::google::protobuf::EnumDescriptor* ESLGBuildingType_descriptor_ = NULL;
-const ::google::protobuf::EnumDescriptor* ESLGBuildingSubType_descriptor_ = NULL;
-const ::google::protobuf::EnumDescriptor* ESLGArmyType_descriptor_ = NULL;
-const ::google::protobuf::EnumDescriptor* ESLGFuncType_descriptor_ = NULL;
-const ::google::protobuf::EnumDescriptor* ESLGBuildingState_descriptor_ = NULL;
+::google::protobuf::Metadata file_level_metadata[5];
+const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[5];
 
 }  // namespace
 
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTableField
+    const TableStruct::entries[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  {0, 0, 0, ::google::protobuf::internal::kInvalidMask, 0, 0},
+};
 
-void protobuf_AssignDesc_NFSLGDefine_2eproto() {
-  protobuf_AddDesc_NFSLGDefine_2eproto();
-  const ::google::protobuf::FileDescriptor* file =
-    ::google::protobuf::DescriptorPool::generated_pool()->FindFileByName(
-      "NFSLGDefine.proto");
-  GOOGLE_CHECK(file != NULL);
-  ReqAckBuyObjectFormShop_descriptor_ = file->message_type(0);
-  static const int ReqAckBuyObjectFormShop_offsets_[5] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqAckBuyObjectFormShop, config_id_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqAckBuyObjectFormShop, x_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqAckBuyObjectFormShop, y_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqAckBuyObjectFormShop, z_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqAckBuyObjectFormShop, shop_id_),
-  };
-  ReqAckBuyObjectFormShop_reflection_ =
-    new ::google::protobuf::internal::GeneratedMessageReflection(
-      ReqAckBuyObjectFormShop_descriptor_,
-      ReqAckBuyObjectFormShop::default_instance_,
-      ReqAckBuyObjectFormShop_offsets_,
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqAckBuyObjectFormShop, _has_bits_[0]),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqAckBuyObjectFormShop, _unknown_fields_),
-      -1,
-      ::google::protobuf::DescriptorPool::generated_pool(),
-      ::google::protobuf::MessageFactory::generated_factory(),
-      sizeof(ReqAckBuyObjectFormShop));
-  ReqAckMoveBuildObject_descriptor_ = file->message_type(1);
-  static const int ReqAckMoveBuildObject_offsets_[5] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqAckMoveBuildObject, row_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqAckMoveBuildObject, object_guid_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqAckMoveBuildObject, x_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqAckMoveBuildObject, y_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqAckMoveBuildObject, z_),
-  };
-  ReqAckMoveBuildObject_reflection_ =
-    new ::google::protobuf::internal::GeneratedMessageReflection(
-      ReqAckMoveBuildObject_descriptor_,
-      ReqAckMoveBuildObject::default_instance_,
-      ReqAckMoveBuildObject_offsets_,
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqAckMoveBuildObject, _has_bits_[0]),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqAckMoveBuildObject, _unknown_fields_),
-      -1,
-      ::google::protobuf::DescriptorPool::generated_pool(),
-      ::google::protobuf::MessageFactory::generated_factory(),
-      sizeof(ReqAckMoveBuildObject));
-  ReqUpBuildLv_descriptor_ = file->message_type(2);
-  static const int ReqUpBuildLv_offsets_[2] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqUpBuildLv, row_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqUpBuildLv, object_guid_),
-  };
-  ReqUpBuildLv_reflection_ =
-    new ::google::protobuf::internal::GeneratedMessageReflection(
-      ReqUpBuildLv_descriptor_,
-      ReqUpBuildLv::default_instance_,
-      ReqUpBuildLv_offsets_,
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqUpBuildLv, _has_bits_[0]),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqUpBuildLv, _unknown_fields_),
-      -1,
-      ::google::protobuf::DescriptorPool::generated_pool(),
-      ::google::protobuf::MessageFactory::generated_factory(),
-      sizeof(ReqUpBuildLv));
-  ReqCreateItem_descriptor_ = file->message_type(3);
-  static const int ReqCreateItem_offsets_[4] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqCreateItem, row_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqCreateItem, object_guid_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqCreateItem, config_id_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqCreateItem, count_),
-  };
-  ReqCreateItem_reflection_ =
-    new ::google::protobuf::internal::GeneratedMessageReflection(
-      ReqCreateItem_descriptor_,
-      ReqCreateItem::default_instance_,
-      ReqCreateItem_offsets_,
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqCreateItem, _has_bits_[0]),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqCreateItem, _unknown_fields_),
-      -1,
-      ::google::protobuf::DescriptorPool::generated_pool(),
-      ::google::protobuf::MessageFactory::generated_factory(),
-      sizeof(ReqCreateItem));
-  ReqBuildOperate_descriptor_ = file->message_type(4);
-  static const int ReqBuildOperate_offsets_[3] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqBuildOperate, row_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqBuildOperate, object_guid_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqBuildOperate, functype_),
-  };
-  ReqBuildOperate_reflection_ =
-    new ::google::protobuf::internal::GeneratedMessageReflection(
-      ReqBuildOperate_descriptor_,
-      ReqBuildOperate::default_instance_,
-      ReqBuildOperate_offsets_,
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqBuildOperate, _has_bits_[0]),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqBuildOperate, _unknown_fields_),
-      -1,
-      ::google::protobuf::DescriptorPool::generated_pool(),
-      ::google::protobuf::MessageFactory::generated_factory(),
-      sizeof(ReqBuildOperate));
-  ESLGBuildingType_descriptor_ = file->enum_type(0);
-  ESLGBuildingSubType_descriptor_ = file->enum_type(1);
-  ESLGArmyType_descriptor_ = file->enum_type(2);
-  ESLGFuncType_descriptor_ = file->enum_type(3);
-  ESLGBuildingState_descriptor_ = file->enum_type(4);
-}
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::AuxillaryParseTableField
+    const TableStruct::aux[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  ::google::protobuf::internal::AuxillaryParseTableField(),
+};
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTable const
+    TableStruct::schema[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+};
+
+const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqAckBuyObjectFormShop, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqAckBuyObjectFormShop, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqAckBuyObjectFormShop, config_id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqAckBuyObjectFormShop, x_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqAckBuyObjectFormShop, y_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqAckBuyObjectFormShop, z_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqAckBuyObjectFormShop, shop_id_),
+  0,
+  2,
+  3,
+  4,
+  1,
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqAckMoveBuildObject, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqAckMoveBuildObject, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqAckMoveBuildObject, row_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqAckMoveBuildObject, object_guid_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqAckMoveBuildObject, x_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqAckMoveBuildObject, y_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqAckMoveBuildObject, z_),
+  1,
+  0,
+  2,
+  3,
+  4,
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqUpBuildLv, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqUpBuildLv, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqUpBuildLv, row_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqUpBuildLv, object_guid_),
+  1,
+  0,
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqCreateItem, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqCreateItem, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqCreateItem, row_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqCreateItem, object_guid_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqCreateItem, config_id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqCreateItem, count_),
+  2,
+  1,
+  0,
+  3,
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqBuildOperate, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqBuildOperate, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqBuildOperate, row_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqBuildOperate, object_guid_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReqBuildOperate, functype_),
+  1,
+  0,
+  2,
+};
+static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, 10, sizeof(ReqAckBuyObjectFormShop)},
+  { 15, 25, sizeof(ReqAckMoveBuildObject)},
+  { 30, 37, sizeof(ReqUpBuildLv)},
+  { 39, 48, sizeof(ReqCreateItem)},
+  { 52, 60, sizeof(ReqBuildOperate)},
+};
+
+static ::google::protobuf::Message const * const file_default_instances[] = {
+  reinterpret_cast<const ::google::protobuf::Message*>(&_ReqAckBuyObjectFormShop_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_ReqAckMoveBuildObject_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_ReqUpBuildLv_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_ReqCreateItem_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_ReqBuildOperate_default_instance_),
+};
 
 namespace {
 
-GOOGLE_PROTOBUF_DECLARE_ONCE(protobuf_AssignDescriptors_once_);
-inline void protobuf_AssignDescriptorsOnce() {
-  ::google::protobuf::GoogleOnceInit(&protobuf_AssignDescriptors_once_,
-                 &protobuf_AssignDesc_NFSLGDefine_2eproto);
+void protobuf_AssignDescriptors() {
+  AddDescriptors();
+  ::google::protobuf::MessageFactory* factory = NULL;
+  AssignDescriptors(
+      "NFSLGDefine.proto", schemas, file_default_instances, TableStruct::offsets, factory,
+      file_level_metadata, file_level_enum_descriptors, NULL);
 }
 
+void protobuf_AssignDescriptorsOnce() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &protobuf_AssignDescriptors);
+}
+
+void protobuf_RegisterTypes(const ::std::string&) GOOGLE_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-    ReqAckBuyObjectFormShop_descriptor_, &ReqAckBuyObjectFormShop::default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-    ReqAckMoveBuildObject_descriptor_, &ReqAckMoveBuildObject::default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-    ReqUpBuildLv_descriptor_, &ReqUpBuildLv::default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-    ReqCreateItem_descriptor_, &ReqCreateItem::default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-    ReqBuildOperate_descriptor_, &ReqBuildOperate::default_instance());
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 5);
 }
 
 }  // namespace
-
-void protobuf_ShutdownFile_NFSLGDefine_2eproto() {
-  delete ReqAckBuyObjectFormShop::default_instance_;
-  delete ReqAckBuyObjectFormShop_reflection_;
-  delete ReqAckMoveBuildObject::default_instance_;
-  delete ReqAckMoveBuildObject_reflection_;
-  delete ReqUpBuildLv::default_instance_;
-  delete ReqUpBuildLv_reflection_;
-  delete ReqCreateItem::default_instance_;
-  delete ReqCreateItem_reflection_;
-  delete ReqBuildOperate::default_instance_;
-  delete ReqBuildOperate_reflection_;
-}
-
-void protobuf_AddDesc_NFSLGDefine_2eproto() {
-  static bool already_here = false;
-  if (already_here) return;
-  already_here = true;
+void TableStruct::InitDefaultsImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-  ::NFMsg::protobuf_AddDesc_NFMsgBase_2eproto();
-  ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-    "\n\021NFSLGDefine.proto\022\005NFMsg\032\017NFMsgBase.pr"
-    "oto\"^\n\027ReqAckBuyObjectFormShop\022\021\n\tconfig"
-    "_id\030\001 \002(\t\022\t\n\001x\030\002 \002(\002\022\t\n\001y\030\003 \002(\002\022\t\n\001z\030\004 \002"
-    "(\002\022\017\n\007Shop_id\030\005 \002(\t\"h\n\025ReqAckMoveBuildOb"
-    "ject\022\013\n\003row\030\001 \001(\005\022!\n\013object_guid\030\002 \002(\0132\014"
-    ".NFMsg.Ident\022\t\n\001x\030\003 \002(\002\022\t\n\001y\030\004 \002(\002\022\t\n\001z\030"
-    "\005 \002(\002\">\n\014ReqUpBuildLv\022\013\n\003row\030\001 \001(\005\022!\n\013ob"
-    "ject_guid\030\002 \002(\0132\014.NFMsg.Ident\"a\n\rReqCrea"
-    "teItem\022\013\n\003row\030\001 \001(\005\022!\n\013object_guid\030\002 \002(\013"
-    "2\014.NFMsg.Ident\022\021\n\tconfig_id\030\003 \002(\t\022\r\n\005cou"
-    "nt\030\004 \002(\005\"h\n\017ReqBuildOperate\022\013\n\003row\030\001 \001(\005"
-    "\022!\n\013object_guid\030\002 \002(\0132\014.NFMsg.Ident\022%\n\010f"
-    "unctype\030\003 \002(\0162\023.NFMsg.ESLGFuncType*\201\001\n\020E"
-    "SLGBuildingType\022\014\n\010EBT_BASE\020\000\022\017\n\013EBT_DEF"
-    "ENSE\020\001\022\014\n\010EBT_ARMY\020\002\022\020\n\014EBT_RESOURCE\020\003\022\r"
-    "\n\tEBT_GUILD\020\004\022\016\n\nEBT_TEMPLE\020\005\022\017\n\013EBT_NUC"
-    "LEAR\020\006*\200\010\n\023ESLGBuildingSubType\022\r\n\tEBST_H"
-    "ALL\020\000\022\021\n\rEBST_MASHROOM\020F\022\r\n\tEBST_BUSH\020G\022"
-    "\021\n\rEBST_BRANCH_1\020H\022\021\n\rEBST_BRANCH_2\020I\022\021\n"
-    "\rEBST_BRANCH_3\020J\022\017\n\013EBST_TREE_1\020K\022\017\n\013EBS"
-    "T_TREE_2\020L\022\017\n\013EBST_TREE_3\020M\022\020\n\014EBST_STON"
-    "E_1\020N\022\020\n\014EBST_STONE_2\020O\022\020\n\014EBST_STONE_3\020"
-    "P\022\r\n\tEBST_TOMB\020Q\022\022\n\016EBST_DARK_TOMB\020R\022\016\n\n"
-    "EBST_PYXIS\020S\022\016\n\nEBST_TORCH\020T\022\024\n\020EBST__WH"
-    "ITE_FLAG\020U\022\017\n\013EBST_CANNON\020e\022\017\n\013EBST_MORT"
-    "AR\020f\022\025\n\021EBST_ARCHER_TOWER\020g\022\025\n\021EBST_WIZA"
-    "RD_TOWER\020h\022\022\n\016EBST_AIR_TOWER\020i\022\024\n\020EBST_T"
-    "ESLA_TOWER\020j\022\r\n\tEBST_WALL\020k\022\016\n\nEBST_X_BO"
-    "W\020l\022\r\n\tEBST_BOMB\020m\022\021\n\rEBST_AIR_BOMB\020n\022\024\n"
-    "\020EBST_SPRING_TRAP\020o\022\023\n\017EBST_HELL_TOWER\020p"
-    "\022\016\n\tEBST_CAMP\020\310\001\022\021\n\014EBST_BARRACK\020\311\001\022\025\n\020E"
-    "BST_TEC_FACTORY\020\312\001\022\026\n\021EBST_DARK_BARRACK\020"
-    "\313\001\022\026\n\021EBST_DRUG_FACTORY\020\314\001\022\024\n\017EBST_KING_"
-    "ALTAR\020\315\001\022\025\n\020EBST_QUEEN_ALTAR\020\316\001\022\030\n\023EBST_"
-    "GOLD_COLLECTOR\020\254\002\022\026\n\021EBST_GOLD_STORAGE\020\255"
-    "\002\022\031\n\024EBST_STONE_COLLECTOR\020\256\002\022\027\n\022EBST_STO"
-    "NE_STORAGE\020\257\002\022\031\n\024EBST_STEEL_COLLECTOR\020\260\002"
-    "\022\027\n\022EBST_STEEL_STORAGE\020\261\002\022\033\n\026EBST_DIAMON"
-    "D_COLLECTOR\020\262\002\022\031\n\024EBST_DIAMOND_STORAGE\020\263"
-    "\002\022\r\n\010EBST_HUT\020\264\002\022\026\n\021EBST_GUILD_CASTLE\020\220\003"
-    "\022\025\n\020EBST_GUILD_CRYPT\020\221\003\022\025\n\020EBST_ELEMENT_"
-    "LAB\020\364\003\022\031\n\024EBST_NUCLEAR_FACTORY\020\330\004*\370\001\n\014ES"
-    "LGArmyType\022\017\n\013EAT_FOOTMAN\020\000\022\016\n\nEAT_ARCHE"
-    "R\020\001\022\016\n\nEAT_GOBLIN\020\002\022\r\n\tEAT_GIANT\020\003\022\024\n\020EA"
-    "T_WALL_BREAKER\020\004\022\017\n\013EAT_BALLOON\020\005\022\016\n\nEAT"
-    "_HEALER\020\006\022\016\n\nEAT_WIZARD\020\007\022\016\n\nEAT_DRAGON\020"
-    "\010\022\r\n\tEAT_PEKKA\020\t\022\016\n\nEAT_MINION\020\024\022\021\n\rEAT_"
-    "HOG_RIDER\020\025\022\020\n\014EAT_VALKYRIE\020\026\022\r\n\tEAT_GOL"
-    "EM\020\027*\225\002\n\014ESLGFuncType\022\014\n\010EFT_INFO\020\000\022\016\n\nE"
-    "FT_BOOOST\020\001\022\r\n\tEFT_LVLUP\020\002\022\025\n\021EFT_CREATE"
-    "_SOLDER\020\003\022\024\n\020EFT_CREATE_SPEEL\020\004\022\020\n\014EFT_R"
-    "ESEARCH\020\005\022\024\n\020EFT_COLLECT_GOLD\020\006\022\025\n\021EFT_C"
-    "OLLECT_STONE\020\007\022\025\n\021EFT_COLLECT_STEEL\020\010\022\027\n"
-    "\023EFT_COLLECT_DIAMOND\020\t\022\014\n\010EFT_SELL\020\n\022\016\n\n"
-    "EFT_REPAIR\020\013\022\016\n\nEFT_CANCEL\020\014\022\016\n\nEFT_FINI"
-    "SH\020\r*A\n\021ESLGBuildingState\022\014\n\010EBS_IDLE\020\000\022"
-    "\r\n\tEBS_BOOST\020\001\022\017\n\013EBS_UPGRADE\020\002", 2271);
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
-    "NFSLGDefine.proto", &protobuf_RegisterTypes);
-  ReqAckBuyObjectFormShop::default_instance_ = new ReqAckBuyObjectFormShop();
-  ReqAckMoveBuildObject::default_instance_ = new ReqAckMoveBuildObject();
-  ReqUpBuildLv::default_instance_ = new ReqUpBuildLv();
-  ReqCreateItem::default_instance_ = new ReqCreateItem();
-  ReqBuildOperate::default_instance_ = new ReqBuildOperate();
-  ReqAckBuyObjectFormShop::default_instance_->InitAsDefaultInstance();
-  ReqAckMoveBuildObject::default_instance_->InitAsDefaultInstance();
-  ReqUpBuildLv::default_instance_->InitAsDefaultInstance();
-  ReqCreateItem::default_instance_->InitAsDefaultInstance();
-  ReqBuildOperate::default_instance_->InitAsDefaultInstance();
-  ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_NFSLGDefine_2eproto);
+  ::google::protobuf::internal::InitProtobufDefaults();
+  ::NFMsg::protobuf_NFMsgBase_2eproto::InitDefaults();
+  _ReqAckBuyObjectFormShop_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_ReqAckBuyObjectFormShop_default_instance_);_ReqAckMoveBuildObject_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_ReqAckMoveBuildObject_default_instance_);_ReqUpBuildLv_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_ReqUpBuildLv_default_instance_);_ReqCreateItem_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_ReqCreateItem_default_instance_);_ReqBuildOperate_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_ReqBuildOperate_default_instance_);_ReqAckMoveBuildObject_default_instance_._instance.get_mutable()->object_guid_ = const_cast< ::NFMsg::Ident*>(
+      ::NFMsg::Ident::internal_default_instance());
+  _ReqUpBuildLv_default_instance_._instance.get_mutable()->object_guid_ = const_cast< ::NFMsg::Ident*>(
+      ::NFMsg::Ident::internal_default_instance());
+  _ReqCreateItem_default_instance_._instance.get_mutable()->object_guid_ = const_cast< ::NFMsg::Ident*>(
+      ::NFMsg::Ident::internal_default_instance());
+  _ReqBuildOperate_default_instance_._instance.get_mutable()->object_guid_ = const_cast< ::NFMsg::Ident*>(
+      ::NFMsg::Ident::internal_default_instance());
 }
 
-// Force AddDescriptors() to be called at static initialization time.
-struct StaticDescriptorInitializer_NFSLGDefine_2eproto {
-  StaticDescriptorInitializer_NFSLGDefine_2eproto() {
-    protobuf_AddDesc_NFSLGDefine_2eproto();
+void InitDefaults() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &TableStruct::InitDefaultsImpl);
+}
+namespace {
+void AddDescriptorsImpl() {
+  InitDefaults();
+  static const char descriptor[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+      "\n\021NFSLGDefine.proto\022\005NFMsg\032\017NFMsgBase.pr"
+      "oto\"^\n\027ReqAckBuyObjectFormShop\022\021\n\tconfig"
+      "_id\030\001 \002(\t\022\t\n\001x\030\002 \002(\002\022\t\n\001y\030\003 \002(\002\022\t\n\001z\030\004 \002"
+      "(\002\022\017\n\007Shop_id\030\005 \002(\t\"h\n\025ReqAckMoveBuildOb"
+      "ject\022\013\n\003row\030\001 \001(\005\022!\n\013object_guid\030\002 \002(\0132\014"
+      ".NFMsg.Ident\022\t\n\001x\030\003 \002(\002\022\t\n\001y\030\004 \002(\002\022\t\n\001z\030"
+      "\005 \002(\002\">\n\014ReqUpBuildLv\022\013\n\003row\030\001 \001(\005\022!\n\013ob"
+      "ject_guid\030\002 \002(\0132\014.NFMsg.Ident\"a\n\rReqCrea"
+      "teItem\022\013\n\003row\030\001 \001(\005\022!\n\013object_guid\030\002 \002(\013"
+      "2\014.NFMsg.Ident\022\021\n\tconfig_id\030\003 \002(\t\022\r\n\005cou"
+      "nt\030\004 \002(\005\"h\n\017ReqBuildOperate\022\013\n\003row\030\001 \001(\005"
+      "\022!\n\013object_guid\030\002 \002(\0132\014.NFMsg.Ident\022%\n\010f"
+      "unctype\030\003 \002(\0162\023.NFMsg.ESLGFuncType*\201\001\n\020E"
+      "SLGBuildingType\022\014\n\010EBT_BASE\020\000\022\017\n\013EBT_DEF"
+      "ENSE\020\001\022\014\n\010EBT_ARMY\020\002\022\020\n\014EBT_RESOURCE\020\003\022\r"
+      "\n\tEBT_GUILD\020\004\022\016\n\nEBT_TEMPLE\020\005\022\017\n\013EBT_NUC"
+      "LEAR\020\006*\200\010\n\023ESLGBuildingSubType\022\r\n\tEBST_H"
+      "ALL\020\000\022\021\n\rEBST_MASHROOM\020F\022\r\n\tEBST_BUSH\020G\022"
+      "\021\n\rEBST_BRANCH_1\020H\022\021\n\rEBST_BRANCH_2\020I\022\021\n"
+      "\rEBST_BRANCH_3\020J\022\017\n\013EBST_TREE_1\020K\022\017\n\013EBS"
+      "T_TREE_2\020L\022\017\n\013EBST_TREE_3\020M\022\020\n\014EBST_STON"
+      "E_1\020N\022\020\n\014EBST_STONE_2\020O\022\020\n\014EBST_STONE_3\020"
+      "P\022\r\n\tEBST_TOMB\020Q\022\022\n\016EBST_DARK_TOMB\020R\022\016\n\n"
+      "EBST_PYXIS\020S\022\016\n\nEBST_TORCH\020T\022\024\n\020EBST__WH"
+      "ITE_FLAG\020U\022\017\n\013EBST_CANNON\020e\022\017\n\013EBST_MORT"
+      "AR\020f\022\025\n\021EBST_ARCHER_TOWER\020g\022\025\n\021EBST_WIZA"
+      "RD_TOWER\020h\022\022\n\016EBST_AIR_TOWER\020i\022\024\n\020EBST_T"
+      "ESLA_TOWER\020j\022\r\n\tEBST_WALL\020k\022\016\n\nEBST_X_BO"
+      "W\020l\022\r\n\tEBST_BOMB\020m\022\021\n\rEBST_AIR_BOMB\020n\022\024\n"
+      "\020EBST_SPRING_TRAP\020o\022\023\n\017EBST_HELL_TOWER\020p"
+      "\022\016\n\tEBST_CAMP\020\310\001\022\021\n\014EBST_BARRACK\020\311\001\022\025\n\020E"
+      "BST_TEC_FACTORY\020\312\001\022\026\n\021EBST_DARK_BARRACK\020"
+      "\313\001\022\026\n\021EBST_DRUG_FACTORY\020\314\001\022\024\n\017EBST_KING_"
+      "ALTAR\020\315\001\022\025\n\020EBST_QUEEN_ALTAR\020\316\001\022\030\n\023EBST_"
+      "GOLD_COLLECTOR\020\254\002\022\026\n\021EBST_GOLD_STORAGE\020\255"
+      "\002\022\031\n\024EBST_STONE_COLLECTOR\020\256\002\022\027\n\022EBST_STO"
+      "NE_STORAGE\020\257\002\022\031\n\024EBST_STEEL_COLLECTOR\020\260\002"
+      "\022\027\n\022EBST_STEEL_STORAGE\020\261\002\022\033\n\026EBST_DIAMON"
+      "D_COLLECTOR\020\262\002\022\031\n\024EBST_DIAMOND_STORAGE\020\263"
+      "\002\022\r\n\010EBST_HUT\020\264\002\022\026\n\021EBST_GUILD_CASTLE\020\220\003"
+      "\022\025\n\020EBST_GUILD_CRYPT\020\221\003\022\025\n\020EBST_ELEMENT_"
+      "LAB\020\364\003\022\031\n\024EBST_NUCLEAR_FACTORY\020\330\004*\370\001\n\014ES"
+      "LGArmyType\022\017\n\013EAT_FOOTMAN\020\000\022\016\n\nEAT_ARCHE"
+      "R\020\001\022\016\n\nEAT_GOBLIN\020\002\022\r\n\tEAT_GIANT\020\003\022\024\n\020EA"
+      "T_WALL_BREAKER\020\004\022\017\n\013EAT_BALLOON\020\005\022\016\n\nEAT"
+      "_HEALER\020\006\022\016\n\nEAT_WIZARD\020\007\022\016\n\nEAT_DRAGON\020"
+      "\010\022\r\n\tEAT_PEKKA\020\t\022\016\n\nEAT_MINION\020\024\022\021\n\rEAT_"
+      "HOG_RIDER\020\025\022\020\n\014EAT_VALKYRIE\020\026\022\r\n\tEAT_GOL"
+      "EM\020\027*\225\002\n\014ESLGFuncType\022\014\n\010EFT_INFO\020\000\022\016\n\nE"
+      "FT_BOOOST\020\001\022\r\n\tEFT_LVLUP\020\002\022\025\n\021EFT_CREATE"
+      "_SOLDER\020\003\022\024\n\020EFT_CREATE_SPEEL\020\004\022\020\n\014EFT_R"
+      "ESEARCH\020\005\022\024\n\020EFT_COLLECT_GOLD\020\006\022\025\n\021EFT_C"
+      "OLLECT_STONE\020\007\022\025\n\021EFT_COLLECT_STEEL\020\010\022\027\n"
+      "\023EFT_COLLECT_DIAMOND\020\t\022\014\n\010EFT_SELL\020\n\022\016\n\n"
+      "EFT_REPAIR\020\013\022\016\n\nEFT_CANCEL\020\014\022\016\n\nEFT_FINI"
+      "SH\020\r*A\n\021ESLGBuildingState\022\014\n\010EBS_IDLE\020\000\022"
+      "\r\n\tEBS_BOOST\020\001\022\017\n\013EBS_UPGRADE\020\002"
+  };
+  ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
+      descriptor, 2271);
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
+    "NFSLGDefine.proto", &protobuf_RegisterTypes);
+  ::NFMsg::protobuf_NFMsgBase_2eproto::AddDescriptors();
+}
+} // anonymous namespace
+
+void AddDescriptors() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &AddDescriptorsImpl);
+}
+// Force AddDescriptors() to be called at dynamic initialization time.
+struct StaticDescriptorInitializer {
+  StaticDescriptorInitializer() {
+    AddDescriptors();
   }
-} static_descriptor_initializer_NFSLGDefine_2eproto_;
+} static_descriptor_initializer;
+
+}  // namespace protobuf_NFSLGDefine_2eproto
+
 const ::google::protobuf::EnumDescriptor* ESLGBuildingType_descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return ESLGBuildingType_descriptor_;
+  protobuf_NFSLGDefine_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_NFSLGDefine_2eproto::file_level_enum_descriptors[0];
 }
 bool ESLGBuildingType_IsValid(int value) {
-  switch(value) {
+  switch (value) {
     case 0:
     case 1:
     case 2:
@@ -289,11 +307,11 @@ bool ESLGBuildingType_IsValid(int value) {
 }
 
 const ::google::protobuf::EnumDescriptor* ESLGBuildingSubType_descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return ESLGBuildingSubType_descriptor_;
+  protobuf_NFSLGDefine_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_NFSLGDefine_2eproto::file_level_enum_descriptors[1];
 }
 bool ESLGBuildingSubType_IsValid(int value) {
-  switch(value) {
+  switch (value) {
     case 0:
     case 70:
     case 71:
@@ -350,11 +368,11 @@ bool ESLGBuildingSubType_IsValid(int value) {
 }
 
 const ::google::protobuf::EnumDescriptor* ESLGArmyType_descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return ESLGArmyType_descriptor_;
+  protobuf_NFSLGDefine_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_NFSLGDefine_2eproto::file_level_enum_descriptors[2];
 }
 bool ESLGArmyType_IsValid(int value) {
-  switch(value) {
+  switch (value) {
     case 0:
     case 1:
     case 2:
@@ -376,11 +394,11 @@ bool ESLGArmyType_IsValid(int value) {
 }
 
 const ::google::protobuf::EnumDescriptor* ESLGFuncType_descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return ESLGFuncType_descriptor_;
+  protobuf_NFSLGDefine_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_NFSLGDefine_2eproto::file_level_enum_descriptors[3];
 }
 bool ESLGFuncType_IsValid(int value) {
-  switch(value) {
+  switch (value) {
     case 0:
     case 1:
     case 2:
@@ -402,11 +420,11 @@ bool ESLGFuncType_IsValid(int value) {
 }
 
 const ::google::protobuf::EnumDescriptor* ESLGBuildingState_descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return ESLGBuildingState_descriptor_;
+  protobuf_NFSLGDefine_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_NFSLGDefine_2eproto::file_level_enum_descriptors[4];
 }
 bool ESLGBuildingState_IsValid(int value) {
-  switch(value) {
+  switch (value) {
     case 0:
     case 1:
     case 2:
@@ -419,51 +437,59 @@ bool ESLGBuildingState_IsValid(int value) {
 
 // ===================================================================
 
-#ifndef _MSC_VER
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int ReqAckBuyObjectFormShop::kConfigIdFieldNumber;
 const int ReqAckBuyObjectFormShop::kXFieldNumber;
 const int ReqAckBuyObjectFormShop::kYFieldNumber;
 const int ReqAckBuyObjectFormShop::kZFieldNumber;
 const int ReqAckBuyObjectFormShop::kShopIdFieldNumber;
-#endif  // !_MSC_VER
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 ReqAckBuyObjectFormShop::ReqAckBuyObjectFormShop()
-  : ::google::protobuf::Message() {
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_NFSLGDefine_2eproto::InitDefaults();
+  }
   SharedCtor();
+  // @@protoc_insertion_point(constructor:NFMsg.ReqAckBuyObjectFormShop)
 }
-
-void ReqAckBuyObjectFormShop::InitAsDefaultInstance() {
-}
-
 ReqAckBuyObjectFormShop::ReqAckBuyObjectFormShop(const ReqAckBuyObjectFormShop& from)
-  : ::google::protobuf::Message() {
-  SharedCtor();
-  MergeFrom(from);
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  config_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.has_config_id()) {
+    config_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.config_id_);
+  }
+  shop_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.has_shop_id()) {
+    shop_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.shop_id_);
+  }
+  ::memcpy(&x_, &from.x_,
+    static_cast<size_t>(reinterpret_cast<char*>(&z_) -
+    reinterpret_cast<char*>(&x_)) + sizeof(z_));
+  // @@protoc_insertion_point(copy_constructor:NFMsg.ReqAckBuyObjectFormShop)
 }
 
 void ReqAckBuyObjectFormShop::SharedCtor() {
   _cached_size_ = 0;
-  config_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
-  x_ = 0;
-  y_ = 0;
-  z_ = 0;
-  shop_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
-  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  config_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  shop_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(&x_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&z_) -
+      reinterpret_cast<char*>(&x_)) + sizeof(z_));
 }
 
 ReqAckBuyObjectFormShop::~ReqAckBuyObjectFormShop() {
+  // @@protoc_insertion_point(destructor:NFMsg.ReqAckBuyObjectFormShop)
   SharedDtor();
 }
 
 void ReqAckBuyObjectFormShop::SharedDtor() {
-  if (config_id_ != &::google::protobuf::internal::kEmptyString) {
-    delete config_id_;
-  }
-  if (shop_id_ != &::google::protobuf::internal::kEmptyString) {
-    delete shop_id_;
-  }
-  if (this != default_instance_) {
-  }
+  config_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  shop_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
 void ReqAckBuyObjectFormShop::SetCachedSize(int size) const {
@@ -472,315 +498,383 @@ void ReqAckBuyObjectFormShop::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* ReqAckBuyObjectFormShop::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return ReqAckBuyObjectFormShop_descriptor_;
+  protobuf_NFSLGDefine_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_NFSLGDefine_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const ReqAckBuyObjectFormShop& ReqAckBuyObjectFormShop::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_NFSLGDefine_2eproto();
-  return *default_instance_;
+  protobuf_NFSLGDefine_2eproto::InitDefaults();
+  return *internal_default_instance();
 }
 
-ReqAckBuyObjectFormShop* ReqAckBuyObjectFormShop::default_instance_ = NULL;
-
-ReqAckBuyObjectFormShop* ReqAckBuyObjectFormShop::New() const {
-  return new ReqAckBuyObjectFormShop;
+ReqAckBuyObjectFormShop* ReqAckBuyObjectFormShop::New(::google::protobuf::Arena* arena) const {
+  ReqAckBuyObjectFormShop* n = new ReqAckBuyObjectFormShop;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
 }
 
 void ReqAckBuyObjectFormShop::Clear() {
-  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    if (has_config_id()) {
-      if (config_id_ != &::google::protobuf::internal::kEmptyString) {
-        config_id_->clear();
-      }
+// @@protoc_insertion_point(message_clear_start:NFMsg.ReqAckBuyObjectFormShop)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  if (cached_has_bits & 3u) {
+    if (cached_has_bits & 0x00000001u) {
+      GOOGLE_DCHECK(!config_id_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
+      (*config_id_.UnsafeRawStringPointer())->clear();
     }
-    x_ = 0;
-    y_ = 0;
-    z_ = 0;
-    if (has_shop_id()) {
-      if (shop_id_ != &::google::protobuf::internal::kEmptyString) {
-        shop_id_->clear();
-      }
+    if (cached_has_bits & 0x00000002u) {
+      GOOGLE_DCHECK(!shop_id_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
+      (*shop_id_.UnsafeRawStringPointer())->clear();
     }
   }
-  ::memset(_has_bits_, 0, sizeof(_has_bits_));
-  mutable_unknown_fields()->Clear();
+  if (cached_has_bits & 28u) {
+    ::memset(&x_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&z_) -
+        reinterpret_cast<char*>(&x_)) + sizeof(z_));
+  }
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
 }
 
 bool ReqAckBuyObjectFormShop::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  while ((tag = input->ReadTag()) != 0) {
+  // @@protoc_insertion_point(parse_start:NFMsg.ReqAckBuyObjectFormShop)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // required string config_id = 1;
       case 1: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_config_id()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
-            this->config_id().data(), this->config_id().length(),
-            ::google::protobuf::internal::WireFormat::PARSE);
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->config_id().data(), static_cast<int>(this->config_id().length()),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "NFMsg.ReqAckBuyObjectFormShop.config_id");
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
-        if (input->ExpectTag(21)) goto parse_x;
         break;
       }
 
       // required float x = 2;
       case 2: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
-         parse_x:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(21u /* 21 & 0xFF */)) {
+          set_has_x();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, &x_)));
-          set_has_x();
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
-        if (input->ExpectTag(29)) goto parse_y;
         break;
       }
 
       // required float y = 3;
       case 3: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
-         parse_y:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(29u /* 29 & 0xFF */)) {
+          set_has_y();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, &y_)));
-          set_has_y();
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
-        if (input->ExpectTag(37)) goto parse_z;
         break;
       }
 
       // required float z = 4;
       case 4: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
-         parse_z:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(37u /* 37 & 0xFF */)) {
+          set_has_z();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, &z_)));
-          set_has_z();
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
-        if (input->ExpectTag(42)) goto parse_Shop_id;
         break;
       }
 
       // required string Shop_id = 5;
       case 5: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
-         parse_Shop_id:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_shop_id()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
-            this->shop_id().data(), this->shop_id().length(),
-            ::google::protobuf::internal::WireFormat::PARSE);
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->shop_id().data(), static_cast<int>(this->shop_id().length()),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "NFMsg.ReqAckBuyObjectFormShop.Shop_id");
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
-        if (input->ExpectAtEnd()) return true;
         break;
       }
 
       default: {
-      handle_uninterpreted:
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-          return true;
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
         }
         DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, mutable_unknown_fields()));
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
     }
   }
+success:
+  // @@protoc_insertion_point(parse_success:NFMsg.ReqAckBuyObjectFormShop)
   return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:NFMsg.ReqAckBuyObjectFormShop)
+  return false;
 #undef DO_
 }
 
 void ReqAckBuyObjectFormShop::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:NFMsg.ReqAckBuyObjectFormShop)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
   // required string config_id = 1;
-  if (has_config_id()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
-      this->config_id().data(), this->config_id().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE);
-    ::google::protobuf::internal::WireFormatLite::WriteString(
+  if (cached_has_bits & 0x00000001u) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->config_id().data(), static_cast<int>(this->config_id().length()),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "NFMsg.ReqAckBuyObjectFormShop.config_id");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       1, this->config_id(), output);
   }
 
   // required float x = 2;
-  if (has_x()) {
+  if (cached_has_bits & 0x00000004u) {
     ::google::protobuf::internal::WireFormatLite::WriteFloat(2, this->x(), output);
   }
 
   // required float y = 3;
-  if (has_y()) {
+  if (cached_has_bits & 0x00000008u) {
     ::google::protobuf::internal::WireFormatLite::WriteFloat(3, this->y(), output);
   }
 
   // required float z = 4;
-  if (has_z()) {
+  if (cached_has_bits & 0x00000010u) {
     ::google::protobuf::internal::WireFormatLite::WriteFloat(4, this->z(), output);
   }
 
   // required string Shop_id = 5;
-  if (has_shop_id()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
-      this->shop_id().data(), this->shop_id().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE);
-    ::google::protobuf::internal::WireFormatLite::WriteString(
+  if (cached_has_bits & 0x00000002u) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->shop_id().data(), static_cast<int>(this->shop_id().length()),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "NFMsg.ReqAckBuyObjectFormShop.Shop_id");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       5, this->shop_id(), output);
   }
 
-  if (!unknown_fields().empty()) {
+  if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        unknown_fields(), output);
+        _internal_metadata_.unknown_fields(), output);
   }
+  // @@protoc_insertion_point(serialize_end:NFMsg.ReqAckBuyObjectFormShop)
 }
 
-::google::protobuf::uint8* ReqAckBuyObjectFormShop::SerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::google::protobuf::uint8* ReqAckBuyObjectFormShop::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:NFMsg.ReqAckBuyObjectFormShop)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
   // required string config_id = 1;
-  if (has_config_id()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
-      this->config_id().data(), this->config_id().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE);
+  if (cached_has_bits & 0x00000001u) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->config_id().data(), static_cast<int>(this->config_id().length()),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "NFMsg.ReqAckBuyObjectFormShop.config_id");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         1, this->config_id(), target);
   }
 
   // required float x = 2;
-  if (has_x()) {
+  if (cached_has_bits & 0x00000004u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(2, this->x(), target);
   }
 
   // required float y = 3;
-  if (has_y()) {
+  if (cached_has_bits & 0x00000008u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(3, this->y(), target);
   }
 
   // required float z = 4;
-  if (has_z()) {
+  if (cached_has_bits & 0x00000010u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(4, this->z(), target);
   }
 
   // required string Shop_id = 5;
-  if (has_shop_id()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
-      this->shop_id().data(), this->shop_id().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE);
+  if (cached_has_bits & 0x00000002u) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->shop_id().data(), static_cast<int>(this->shop_id().length()),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "NFMsg.ReqAckBuyObjectFormShop.Shop_id");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         5, this->shop_id(), target);
   }
 
-  if (!unknown_fields().empty()) {
+  if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        unknown_fields(), target);
+        _internal_metadata_.unknown_fields(), target);
   }
+  // @@protoc_insertion_point(serialize_to_array_end:NFMsg.ReqAckBuyObjectFormShop)
   return target;
 }
 
-int ReqAckBuyObjectFormShop::ByteSize() const {
-  int total_size = 0;
+size_t ReqAckBuyObjectFormShop::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:NFMsg.ReqAckBuyObjectFormShop)
+  size_t total_size = 0;
 
-  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+  if (has_config_id()) {
     // required string config_id = 1;
-    if (has_config_id()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::StringSize(
-          this->config_id());
-    }
-
-    // required float x = 2;
-    if (has_x()) {
-      total_size += 1 + 4;
-    }
-
-    // required float y = 3;
-    if (has_y()) {
-      total_size += 1 + 4;
-    }
-
-    // required float z = 4;
-    if (has_z()) {
-      total_size += 1 + 4;
-    }
-
-    // required string Shop_id = 5;
-    if (has_shop_id()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::StringSize(
-          this->shop_id());
-    }
-
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->config_id());
   }
-  if (!unknown_fields().empty()) {
+
+  if (has_shop_id()) {
+    // required string Shop_id = 5;
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->shop_id());
+  }
+
+  if (has_x()) {
+    // required float x = 2;
+    total_size += 1 + 4;
+  }
+
+  if (has_y()) {
+    // required float y = 3;
+    total_size += 1 + 4;
+  }
+
+  if (has_z()) {
+    // required float z = 4;
+    total_size += 1 + 4;
+  }
+
+  return total_size;
+}
+size_t ReqAckBuyObjectFormShop::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:NFMsg.ReqAckBuyObjectFormShop)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        unknown_fields());
+        _internal_metadata_.unknown_fields());
   }
+  if (((_has_bits_[0] & 0x0000001f) ^ 0x0000001f) == 0) {  // All required fields are present.
+    // required string config_id = 1;
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->config_id());
+
+    // required string Shop_id = 5;
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->shop_id());
+
+    // required float x = 2;
+    total_size += 1 + 4;
+
+    // required float y = 3;
+    total_size += 1 + 4;
+
+    // required float z = 4;
+    total_size += 1 + 4;
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = total_size;
+  _cached_size_ = cached_size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
   return total_size;
 }
 
 void ReqAckBuyObjectFormShop::MergeFrom(const ::google::protobuf::Message& from) {
-  GOOGLE_CHECK_NE(&from, this);
+// @@protoc_insertion_point(generalized_merge_from_start:NFMsg.ReqAckBuyObjectFormShop)
+  GOOGLE_DCHECK_NE(&from, this);
   const ReqAckBuyObjectFormShop* source =
-    ::google::protobuf::internal::dynamic_cast_if_available<const ReqAckBuyObjectFormShop*>(
-      &from);
+      ::google::protobuf::internal::DynamicCastToGenerated<const ReqAckBuyObjectFormShop>(
+          &from);
   if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:NFMsg.ReqAckBuyObjectFormShop)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:NFMsg.ReqAckBuyObjectFormShop)
     MergeFrom(*source);
   }
 }
 
 void ReqAckBuyObjectFormShop::MergeFrom(const ReqAckBuyObjectFormShop& from) {
-  GOOGLE_CHECK_NE(&from, this);
-  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    if (from.has_config_id()) {
-      set_config_id(from.config_id());
+// @@protoc_insertion_point(class_specific_merge_from_start:NFMsg.ReqAckBuyObjectFormShop)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 31u) {
+    if (cached_has_bits & 0x00000001u) {
+      set_has_config_id();
+      config_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.config_id_);
     }
-    if (from.has_x()) {
-      set_x(from.x());
+    if (cached_has_bits & 0x00000002u) {
+      set_has_shop_id();
+      shop_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.shop_id_);
     }
-    if (from.has_y()) {
-      set_y(from.y());
+    if (cached_has_bits & 0x00000004u) {
+      x_ = from.x_;
     }
-    if (from.has_z()) {
-      set_z(from.z());
+    if (cached_has_bits & 0x00000008u) {
+      y_ = from.y_;
     }
-    if (from.has_shop_id()) {
-      set_shop_id(from.shop_id());
+    if (cached_has_bits & 0x00000010u) {
+      z_ = from.z_;
     }
+    _has_bits_[0] |= cached_has_bits;
   }
-  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
 
 void ReqAckBuyObjectFormShop::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:NFMsg.ReqAckBuyObjectFormShop)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void ReqAckBuyObjectFormShop::CopyFrom(const ReqAckBuyObjectFormShop& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:NFMsg.ReqAckBuyObjectFormShop)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -788,75 +882,282 @@ void ReqAckBuyObjectFormShop::CopyFrom(const ReqAckBuyObjectFormShop& from) {
 
 bool ReqAckBuyObjectFormShop::IsInitialized() const {
   if ((_has_bits_[0] & 0x0000001f) != 0x0000001f) return false;
-
   return true;
 }
 
 void ReqAckBuyObjectFormShop::Swap(ReqAckBuyObjectFormShop* other) {
-  if (other != this) {
-    std::swap(config_id_, other->config_id_);
-    std::swap(x_, other->x_);
-    std::swap(y_, other->y_);
-    std::swap(z_, other->z_);
-    std::swap(shop_id_, other->shop_id_);
-    std::swap(_has_bits_[0], other->_has_bits_[0]);
-    _unknown_fields_.Swap(&other->_unknown_fields_);
-    std::swap(_cached_size_, other->_cached_size_);
-  }
+  if (other == this) return;
+  InternalSwap(other);
+}
+void ReqAckBuyObjectFormShop::InternalSwap(ReqAckBuyObjectFormShop* other) {
+  using std::swap;
+  config_id_.Swap(&other->config_id_);
+  shop_id_.Swap(&other->shop_id_);
+  swap(x_, other->x_);
+  swap(y_, other->y_);
+  swap(z_, other->z_);
+  swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata ReqAckBuyObjectFormShop::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = ReqAckBuyObjectFormShop_descriptor_;
-  metadata.reflection = ReqAckBuyObjectFormShop_reflection_;
-  return metadata;
+  protobuf_NFSLGDefine_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_NFSLGDefine_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// ReqAckBuyObjectFormShop
+
+// required string config_id = 1;
+bool ReqAckBuyObjectFormShop::has_config_id() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+void ReqAckBuyObjectFormShop::set_has_config_id() {
+  _has_bits_[0] |= 0x00000001u;
+}
+void ReqAckBuyObjectFormShop::clear_has_config_id() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+void ReqAckBuyObjectFormShop::clear_config_id() {
+  config_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_config_id();
+}
+const ::std::string& ReqAckBuyObjectFormShop::config_id() const {
+  // @@protoc_insertion_point(field_get:NFMsg.ReqAckBuyObjectFormShop.config_id)
+  return config_id_.GetNoArena();
+}
+void ReqAckBuyObjectFormShop::set_config_id(const ::std::string& value) {
+  set_has_config_id();
+  config_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:NFMsg.ReqAckBuyObjectFormShop.config_id)
+}
+#if LANG_CXX11
+void ReqAckBuyObjectFormShop::set_config_id(::std::string&& value) {
+  set_has_config_id();
+  config_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:NFMsg.ReqAckBuyObjectFormShop.config_id)
+}
+#endif
+void ReqAckBuyObjectFormShop::set_config_id(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  set_has_config_id();
+  config_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:NFMsg.ReqAckBuyObjectFormShop.config_id)
+}
+void ReqAckBuyObjectFormShop::set_config_id(const char* value, size_t size) {
+  set_has_config_id();
+  config_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:NFMsg.ReqAckBuyObjectFormShop.config_id)
+}
+::std::string* ReqAckBuyObjectFormShop::mutable_config_id() {
+  set_has_config_id();
+  // @@protoc_insertion_point(field_mutable:NFMsg.ReqAckBuyObjectFormShop.config_id)
+  return config_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* ReqAckBuyObjectFormShop::release_config_id() {
+  // @@protoc_insertion_point(field_release:NFMsg.ReqAckBuyObjectFormShop.config_id)
+  clear_has_config_id();
+  return config_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void ReqAckBuyObjectFormShop::set_allocated_config_id(::std::string* config_id) {
+  if (config_id != NULL) {
+    set_has_config_id();
+  } else {
+    clear_has_config_id();
+  }
+  config_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), config_id);
+  // @@protoc_insertion_point(field_set_allocated:NFMsg.ReqAckBuyObjectFormShop.config_id)
+}
+
+// required float x = 2;
+bool ReqAckBuyObjectFormShop::has_x() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+void ReqAckBuyObjectFormShop::set_has_x() {
+  _has_bits_[0] |= 0x00000004u;
+}
+void ReqAckBuyObjectFormShop::clear_has_x() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+void ReqAckBuyObjectFormShop::clear_x() {
+  x_ = 0;
+  clear_has_x();
+}
+float ReqAckBuyObjectFormShop::x() const {
+  // @@protoc_insertion_point(field_get:NFMsg.ReqAckBuyObjectFormShop.x)
+  return x_;
+}
+void ReqAckBuyObjectFormShop::set_x(float value) {
+  set_has_x();
+  x_ = value;
+  // @@protoc_insertion_point(field_set:NFMsg.ReqAckBuyObjectFormShop.x)
+}
+
+// required float y = 3;
+bool ReqAckBuyObjectFormShop::has_y() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+void ReqAckBuyObjectFormShop::set_has_y() {
+  _has_bits_[0] |= 0x00000008u;
+}
+void ReqAckBuyObjectFormShop::clear_has_y() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+void ReqAckBuyObjectFormShop::clear_y() {
+  y_ = 0;
+  clear_has_y();
+}
+float ReqAckBuyObjectFormShop::y() const {
+  // @@protoc_insertion_point(field_get:NFMsg.ReqAckBuyObjectFormShop.y)
+  return y_;
+}
+void ReqAckBuyObjectFormShop::set_y(float value) {
+  set_has_y();
+  y_ = value;
+  // @@protoc_insertion_point(field_set:NFMsg.ReqAckBuyObjectFormShop.y)
+}
+
+// required float z = 4;
+bool ReqAckBuyObjectFormShop::has_z() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+void ReqAckBuyObjectFormShop::set_has_z() {
+  _has_bits_[0] |= 0x00000010u;
+}
+void ReqAckBuyObjectFormShop::clear_has_z() {
+  _has_bits_[0] &= ~0x00000010u;
+}
+void ReqAckBuyObjectFormShop::clear_z() {
+  z_ = 0;
+  clear_has_z();
+}
+float ReqAckBuyObjectFormShop::z() const {
+  // @@protoc_insertion_point(field_get:NFMsg.ReqAckBuyObjectFormShop.z)
+  return z_;
+}
+void ReqAckBuyObjectFormShop::set_z(float value) {
+  set_has_z();
+  z_ = value;
+  // @@protoc_insertion_point(field_set:NFMsg.ReqAckBuyObjectFormShop.z)
+}
+
+// required string Shop_id = 5;
+bool ReqAckBuyObjectFormShop::has_shop_id() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+void ReqAckBuyObjectFormShop::set_has_shop_id() {
+  _has_bits_[0] |= 0x00000002u;
+}
+void ReqAckBuyObjectFormShop::clear_has_shop_id() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+void ReqAckBuyObjectFormShop::clear_shop_id() {
+  shop_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_shop_id();
+}
+const ::std::string& ReqAckBuyObjectFormShop::shop_id() const {
+  // @@protoc_insertion_point(field_get:NFMsg.ReqAckBuyObjectFormShop.Shop_id)
+  return shop_id_.GetNoArena();
+}
+void ReqAckBuyObjectFormShop::set_shop_id(const ::std::string& value) {
+  set_has_shop_id();
+  shop_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:NFMsg.ReqAckBuyObjectFormShop.Shop_id)
+}
+#if LANG_CXX11
+void ReqAckBuyObjectFormShop::set_shop_id(::std::string&& value) {
+  set_has_shop_id();
+  shop_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:NFMsg.ReqAckBuyObjectFormShop.Shop_id)
+}
+#endif
+void ReqAckBuyObjectFormShop::set_shop_id(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  set_has_shop_id();
+  shop_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:NFMsg.ReqAckBuyObjectFormShop.Shop_id)
+}
+void ReqAckBuyObjectFormShop::set_shop_id(const char* value, size_t size) {
+  set_has_shop_id();
+  shop_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:NFMsg.ReqAckBuyObjectFormShop.Shop_id)
+}
+::std::string* ReqAckBuyObjectFormShop::mutable_shop_id() {
+  set_has_shop_id();
+  // @@protoc_insertion_point(field_mutable:NFMsg.ReqAckBuyObjectFormShop.Shop_id)
+  return shop_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* ReqAckBuyObjectFormShop::release_shop_id() {
+  // @@protoc_insertion_point(field_release:NFMsg.ReqAckBuyObjectFormShop.Shop_id)
+  clear_has_shop_id();
+  return shop_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void ReqAckBuyObjectFormShop::set_allocated_shop_id(::std::string* shop_id) {
+  if (shop_id != NULL) {
+    set_has_shop_id();
+  } else {
+    clear_has_shop_id();
+  }
+  shop_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), shop_id);
+  // @@protoc_insertion_point(field_set_allocated:NFMsg.ReqAckBuyObjectFormShop.Shop_id)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
 
-#ifndef _MSC_VER
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int ReqAckMoveBuildObject::kRowFieldNumber;
 const int ReqAckMoveBuildObject::kObjectGuidFieldNumber;
 const int ReqAckMoveBuildObject::kXFieldNumber;
 const int ReqAckMoveBuildObject::kYFieldNumber;
 const int ReqAckMoveBuildObject::kZFieldNumber;
-#endif  // !_MSC_VER
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 ReqAckMoveBuildObject::ReqAckMoveBuildObject()
-  : ::google::protobuf::Message() {
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_NFSLGDefine_2eproto::InitDefaults();
+  }
   SharedCtor();
+  // @@protoc_insertion_point(constructor:NFMsg.ReqAckMoveBuildObject)
 }
-
-void ReqAckMoveBuildObject::InitAsDefaultInstance() {
-  object_guid_ = const_cast< ::NFMsg::Ident*>(&::NFMsg::Ident::default_instance());
-}
-
 ReqAckMoveBuildObject::ReqAckMoveBuildObject(const ReqAckMoveBuildObject& from)
-  : ::google::protobuf::Message() {
-  SharedCtor();
-  MergeFrom(from);
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_object_guid()) {
+    object_guid_ = new ::NFMsg::Ident(*from.object_guid_);
+  } else {
+    object_guid_ = NULL;
+  }
+  ::memcpy(&row_, &from.row_,
+    static_cast<size_t>(reinterpret_cast<char*>(&z_) -
+    reinterpret_cast<char*>(&row_)) + sizeof(z_));
+  // @@protoc_insertion_point(copy_constructor:NFMsg.ReqAckMoveBuildObject)
 }
 
 void ReqAckMoveBuildObject::SharedCtor() {
   _cached_size_ = 0;
-  row_ = 0;
-  object_guid_ = NULL;
-  x_ = 0;
-  y_ = 0;
-  z_ = 0;
-  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  ::memset(&object_guid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&z_) -
+      reinterpret_cast<char*>(&object_guid_)) + sizeof(z_));
 }
 
 ReqAckMoveBuildObject::~ReqAckMoveBuildObject() {
+  // @@protoc_insertion_point(destructor:NFMsg.ReqAckMoveBuildObject)
   SharedDtor();
 }
 
 void ReqAckMoveBuildObject::SharedDtor() {
-  if (this != default_instance_) {
-    delete object_guid_;
-  }
+  if (this != internal_default_instance()) delete object_guid_;
 }
 
 void ReqAckMoveBuildObject::SetCachedSize(int size) const {
@@ -865,363 +1166,570 @@ void ReqAckMoveBuildObject::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* ReqAckMoveBuildObject::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return ReqAckMoveBuildObject_descriptor_;
+  protobuf_NFSLGDefine_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_NFSLGDefine_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const ReqAckMoveBuildObject& ReqAckMoveBuildObject::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_NFSLGDefine_2eproto();
-  return *default_instance_;
+  protobuf_NFSLGDefine_2eproto::InitDefaults();
+  return *internal_default_instance();
 }
 
-ReqAckMoveBuildObject* ReqAckMoveBuildObject::default_instance_ = NULL;
-
-ReqAckMoveBuildObject* ReqAckMoveBuildObject::New() const {
-  return new ReqAckMoveBuildObject;
+ReqAckMoveBuildObject* ReqAckMoveBuildObject::New(::google::protobuf::Arena* arena) const {
+  ReqAckMoveBuildObject* n = new ReqAckMoveBuildObject;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
 }
 
 void ReqAckMoveBuildObject::Clear() {
-  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    row_ = 0;
-    if (has_object_guid()) {
-      if (object_guid_ != NULL) object_guid_->::NFMsg::Ident::Clear();
-    }
-    x_ = 0;
-    y_ = 0;
-    z_ = 0;
+// @@protoc_insertion_point(message_clear_start:NFMsg.ReqAckMoveBuildObject)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (has_object_guid()) {
+    GOOGLE_DCHECK(object_guid_ != NULL);
+    object_guid_->::NFMsg::Ident::Clear();
   }
-  ::memset(_has_bits_, 0, sizeof(_has_bits_));
-  mutable_unknown_fields()->Clear();
+  cached_has_bits = _has_bits_[0];
+  if (cached_has_bits & 30u) {
+    ::memset(&row_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&z_) -
+        reinterpret_cast<char*>(&row_)) + sizeof(z_));
+  }
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
 }
 
 bool ReqAckMoveBuildObject::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  while ((tag = input->ReadTag()) != 0) {
+  // @@protoc_insertion_point(parse_start:NFMsg.ReqAckMoveBuildObject)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // optional int32 row = 1;
       case 1: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
+          set_has_row();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, &row_)));
-          set_has_row();
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
-        if (input->ExpectTag(18)) goto parse_object_guid;
         break;
       }
 
       // required .NFMsg.Ident object_guid = 2;
       case 2: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
-         parse_object_guid:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_object_guid()));
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
-        if (input->ExpectTag(29)) goto parse_x;
         break;
       }
 
       // required float x = 3;
       case 3: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
-         parse_x:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(29u /* 29 & 0xFF */)) {
+          set_has_x();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, &x_)));
-          set_has_x();
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
-        if (input->ExpectTag(37)) goto parse_y;
         break;
       }
 
       // required float y = 4;
       case 4: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
-         parse_y:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(37u /* 37 & 0xFF */)) {
+          set_has_y();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, &y_)));
-          set_has_y();
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
-        if (input->ExpectTag(45)) goto parse_z;
         break;
       }
 
       // required float z = 5;
       case 5: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
-         parse_z:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(45u /* 45 & 0xFF */)) {
+          set_has_z();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, &z_)));
-          set_has_z();
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
-        if (input->ExpectAtEnd()) return true;
         break;
       }
 
       default: {
-      handle_uninterpreted:
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-          return true;
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
         }
         DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, mutable_unknown_fields()));
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
     }
   }
+success:
+  // @@protoc_insertion_point(parse_success:NFMsg.ReqAckMoveBuildObject)
   return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:NFMsg.ReqAckMoveBuildObject)
+  return false;
 #undef DO_
 }
 
 void ReqAckMoveBuildObject::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:NFMsg.ReqAckMoveBuildObject)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
   // optional int32 row = 1;
-  if (has_row()) {
+  if (cached_has_bits & 0x00000002u) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->row(), output);
   }
 
   // required .NFMsg.Ident object_guid = 2;
-  if (has_object_guid()) {
+  if (cached_has_bits & 0x00000001u) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, this->object_guid(), output);
+      2, *this->object_guid_, output);
   }
 
   // required float x = 3;
-  if (has_x()) {
+  if (cached_has_bits & 0x00000004u) {
     ::google::protobuf::internal::WireFormatLite::WriteFloat(3, this->x(), output);
   }
 
   // required float y = 4;
-  if (has_y()) {
+  if (cached_has_bits & 0x00000008u) {
     ::google::protobuf::internal::WireFormatLite::WriteFloat(4, this->y(), output);
   }
 
   // required float z = 5;
-  if (has_z()) {
+  if (cached_has_bits & 0x00000010u) {
     ::google::protobuf::internal::WireFormatLite::WriteFloat(5, this->z(), output);
   }
 
-  if (!unknown_fields().empty()) {
+  if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        unknown_fields(), output);
+        _internal_metadata_.unknown_fields(), output);
   }
+  // @@protoc_insertion_point(serialize_end:NFMsg.ReqAckMoveBuildObject)
 }
 
-::google::protobuf::uint8* ReqAckMoveBuildObject::SerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::google::protobuf::uint8* ReqAckMoveBuildObject::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:NFMsg.ReqAckMoveBuildObject)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
   // optional int32 row = 1;
-  if (has_row()) {
+  if (cached_has_bits & 0x00000002u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->row(), target);
   }
 
   // required .NFMsg.Ident object_guid = 2;
-  if (has_object_guid()) {
+  if (cached_has_bits & 0x00000001u) {
     target = ::google::protobuf::internal::WireFormatLite::
-      WriteMessageNoVirtualToArray(
-        2, this->object_guid(), target);
+      InternalWriteMessageNoVirtualToArray(
+        2, *this->object_guid_, deterministic, target);
   }
 
   // required float x = 3;
-  if (has_x()) {
+  if (cached_has_bits & 0x00000004u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(3, this->x(), target);
   }
 
   // required float y = 4;
-  if (has_y()) {
+  if (cached_has_bits & 0x00000008u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(4, this->y(), target);
   }
 
   // required float z = 5;
-  if (has_z()) {
+  if (cached_has_bits & 0x00000010u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(5, this->z(), target);
   }
 
-  if (!unknown_fields().empty()) {
+  if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        unknown_fields(), target);
+        _internal_metadata_.unknown_fields(), target);
   }
+  // @@protoc_insertion_point(serialize_to_array_end:NFMsg.ReqAckMoveBuildObject)
   return target;
 }
 
-int ReqAckMoveBuildObject::ByteSize() const {
-  int total_size = 0;
+size_t ReqAckMoveBuildObject::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:NFMsg.ReqAckMoveBuildObject)
+  size_t total_size = 0;
 
-  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    // optional int32 row = 1;
-    if (has_row()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-          this->row());
-    }
-
+  if (has_object_guid()) {
     // required .NFMsg.Ident object_guid = 2;
-    if (has_object_guid()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-          this->object_guid());
-    }
-
-    // required float x = 3;
-    if (has_x()) {
-      total_size += 1 + 4;
-    }
-
-    // required float y = 4;
-    if (has_y()) {
-      total_size += 1 + 4;
-    }
-
-    // required float z = 5;
-    if (has_z()) {
-      total_size += 1 + 4;
-    }
-
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->object_guid_);
   }
-  if (!unknown_fields().empty()) {
+
+  if (has_x()) {
+    // required float x = 3;
+    total_size += 1 + 4;
+  }
+
+  if (has_y()) {
+    // required float y = 4;
+    total_size += 1 + 4;
+  }
+
+  if (has_z()) {
+    // required float z = 5;
+    total_size += 1 + 4;
+  }
+
+  return total_size;
+}
+size_t ReqAckMoveBuildObject::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:NFMsg.ReqAckMoveBuildObject)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        unknown_fields());
+        _internal_metadata_.unknown_fields());
   }
+  if (((_has_bits_[0] & 0x0000001d) ^ 0x0000001d) == 0) {  // All required fields are present.
+    // required .NFMsg.Ident object_guid = 2;
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->object_guid_);
+
+    // required float x = 3;
+    total_size += 1 + 4;
+
+    // required float y = 4;
+    total_size += 1 + 4;
+
+    // required float z = 5;
+    total_size += 1 + 4;
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  // optional int32 row = 1;
+  if (has_row()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->row());
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = total_size;
+  _cached_size_ = cached_size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
   return total_size;
 }
 
 void ReqAckMoveBuildObject::MergeFrom(const ::google::protobuf::Message& from) {
-  GOOGLE_CHECK_NE(&from, this);
+// @@protoc_insertion_point(generalized_merge_from_start:NFMsg.ReqAckMoveBuildObject)
+  GOOGLE_DCHECK_NE(&from, this);
   const ReqAckMoveBuildObject* source =
-    ::google::protobuf::internal::dynamic_cast_if_available<const ReqAckMoveBuildObject*>(
-      &from);
+      ::google::protobuf::internal::DynamicCastToGenerated<const ReqAckMoveBuildObject>(
+          &from);
   if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:NFMsg.ReqAckMoveBuildObject)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:NFMsg.ReqAckMoveBuildObject)
     MergeFrom(*source);
   }
 }
 
 void ReqAckMoveBuildObject::MergeFrom(const ReqAckMoveBuildObject& from) {
-  GOOGLE_CHECK_NE(&from, this);
-  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    if (from.has_row()) {
-      set_row(from.row());
-    }
-    if (from.has_object_guid()) {
+// @@protoc_insertion_point(class_specific_merge_from_start:NFMsg.ReqAckMoveBuildObject)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 31u) {
+    if (cached_has_bits & 0x00000001u) {
       mutable_object_guid()->::NFMsg::Ident::MergeFrom(from.object_guid());
     }
-    if (from.has_x()) {
-      set_x(from.x());
+    if (cached_has_bits & 0x00000002u) {
+      row_ = from.row_;
     }
-    if (from.has_y()) {
-      set_y(from.y());
+    if (cached_has_bits & 0x00000004u) {
+      x_ = from.x_;
     }
-    if (from.has_z()) {
-      set_z(from.z());
+    if (cached_has_bits & 0x00000008u) {
+      y_ = from.y_;
     }
+    if (cached_has_bits & 0x00000010u) {
+      z_ = from.z_;
+    }
+    _has_bits_[0] |= cached_has_bits;
   }
-  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
 
 void ReqAckMoveBuildObject::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:NFMsg.ReqAckMoveBuildObject)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void ReqAckMoveBuildObject::CopyFrom(const ReqAckMoveBuildObject& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:NFMsg.ReqAckMoveBuildObject)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 bool ReqAckMoveBuildObject::IsInitialized() const {
-  if ((_has_bits_[0] & 0x0000001e) != 0x0000001e) return false;
-
+  if ((_has_bits_[0] & 0x0000001d) != 0x0000001d) return false;
   if (has_object_guid()) {
-    if (!this->object_guid().IsInitialized()) return false;
+    if (!this->object_guid_->IsInitialized()) return false;
   }
   return true;
 }
 
 void ReqAckMoveBuildObject::Swap(ReqAckMoveBuildObject* other) {
-  if (other != this) {
-    std::swap(row_, other->row_);
-    std::swap(object_guid_, other->object_guid_);
-    std::swap(x_, other->x_);
-    std::swap(y_, other->y_);
-    std::swap(z_, other->z_);
-    std::swap(_has_bits_[0], other->_has_bits_[0]);
-    _unknown_fields_.Swap(&other->_unknown_fields_);
-    std::swap(_cached_size_, other->_cached_size_);
-  }
+  if (other == this) return;
+  InternalSwap(other);
+}
+void ReqAckMoveBuildObject::InternalSwap(ReqAckMoveBuildObject* other) {
+  using std::swap;
+  swap(object_guid_, other->object_guid_);
+  swap(row_, other->row_);
+  swap(x_, other->x_);
+  swap(y_, other->y_);
+  swap(z_, other->z_);
+  swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata ReqAckMoveBuildObject::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = ReqAckMoveBuildObject_descriptor_;
-  metadata.reflection = ReqAckMoveBuildObject_reflection_;
-  return metadata;
+  protobuf_NFSLGDefine_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_NFSLGDefine_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// ReqAckMoveBuildObject
+
+// optional int32 row = 1;
+bool ReqAckMoveBuildObject::has_row() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+void ReqAckMoveBuildObject::set_has_row() {
+  _has_bits_[0] |= 0x00000002u;
+}
+void ReqAckMoveBuildObject::clear_has_row() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+void ReqAckMoveBuildObject::clear_row() {
+  row_ = 0;
+  clear_has_row();
+}
+::google::protobuf::int32 ReqAckMoveBuildObject::row() const {
+  // @@protoc_insertion_point(field_get:NFMsg.ReqAckMoveBuildObject.row)
+  return row_;
+}
+void ReqAckMoveBuildObject::set_row(::google::protobuf::int32 value) {
+  set_has_row();
+  row_ = value;
+  // @@protoc_insertion_point(field_set:NFMsg.ReqAckMoveBuildObject.row)
+}
+
+// required .NFMsg.Ident object_guid = 2;
+bool ReqAckMoveBuildObject::has_object_guid() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+void ReqAckMoveBuildObject::set_has_object_guid() {
+  _has_bits_[0] |= 0x00000001u;
+}
+void ReqAckMoveBuildObject::clear_has_object_guid() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+void ReqAckMoveBuildObject::clear_object_guid() {
+  if (object_guid_ != NULL) object_guid_->::NFMsg::Ident::Clear();
+  clear_has_object_guid();
+}
+const ::NFMsg::Ident& ReqAckMoveBuildObject::object_guid() const {
+  const ::NFMsg::Ident* p = object_guid_;
+  // @@protoc_insertion_point(field_get:NFMsg.ReqAckMoveBuildObject.object_guid)
+  return p != NULL ? *p : *reinterpret_cast<const ::NFMsg::Ident*>(
+      &::NFMsg::_Ident_default_instance_);
+}
+::NFMsg::Ident* ReqAckMoveBuildObject::mutable_object_guid() {
+  set_has_object_guid();
+  if (object_guid_ == NULL) {
+    object_guid_ = new ::NFMsg::Ident;
+  }
+  // @@protoc_insertion_point(field_mutable:NFMsg.ReqAckMoveBuildObject.object_guid)
+  return object_guid_;
+}
+::NFMsg::Ident* ReqAckMoveBuildObject::release_object_guid() {
+  // @@protoc_insertion_point(field_release:NFMsg.ReqAckMoveBuildObject.object_guid)
+  clear_has_object_guid();
+  ::NFMsg::Ident* temp = object_guid_;
+  object_guid_ = NULL;
+  return temp;
+}
+void ReqAckMoveBuildObject::set_allocated_object_guid(::NFMsg::Ident* object_guid) {
+  delete object_guid_;
+  object_guid_ = object_guid;
+  if (object_guid) {
+    set_has_object_guid();
+  } else {
+    clear_has_object_guid();
+  }
+  // @@protoc_insertion_point(field_set_allocated:NFMsg.ReqAckMoveBuildObject.object_guid)
+}
+
+// required float x = 3;
+bool ReqAckMoveBuildObject::has_x() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+void ReqAckMoveBuildObject::set_has_x() {
+  _has_bits_[0] |= 0x00000004u;
+}
+void ReqAckMoveBuildObject::clear_has_x() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+void ReqAckMoveBuildObject::clear_x() {
+  x_ = 0;
+  clear_has_x();
+}
+float ReqAckMoveBuildObject::x() const {
+  // @@protoc_insertion_point(field_get:NFMsg.ReqAckMoveBuildObject.x)
+  return x_;
+}
+void ReqAckMoveBuildObject::set_x(float value) {
+  set_has_x();
+  x_ = value;
+  // @@protoc_insertion_point(field_set:NFMsg.ReqAckMoveBuildObject.x)
+}
+
+// required float y = 4;
+bool ReqAckMoveBuildObject::has_y() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+void ReqAckMoveBuildObject::set_has_y() {
+  _has_bits_[0] |= 0x00000008u;
+}
+void ReqAckMoveBuildObject::clear_has_y() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+void ReqAckMoveBuildObject::clear_y() {
+  y_ = 0;
+  clear_has_y();
+}
+float ReqAckMoveBuildObject::y() const {
+  // @@protoc_insertion_point(field_get:NFMsg.ReqAckMoveBuildObject.y)
+  return y_;
+}
+void ReqAckMoveBuildObject::set_y(float value) {
+  set_has_y();
+  y_ = value;
+  // @@protoc_insertion_point(field_set:NFMsg.ReqAckMoveBuildObject.y)
+}
+
+// required float z = 5;
+bool ReqAckMoveBuildObject::has_z() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+void ReqAckMoveBuildObject::set_has_z() {
+  _has_bits_[0] |= 0x00000010u;
+}
+void ReqAckMoveBuildObject::clear_has_z() {
+  _has_bits_[0] &= ~0x00000010u;
+}
+void ReqAckMoveBuildObject::clear_z() {
+  z_ = 0;
+  clear_has_z();
+}
+float ReqAckMoveBuildObject::z() const {
+  // @@protoc_insertion_point(field_get:NFMsg.ReqAckMoveBuildObject.z)
+  return z_;
+}
+void ReqAckMoveBuildObject::set_z(float value) {
+  set_has_z();
+  z_ = value;
+  // @@protoc_insertion_point(field_set:NFMsg.ReqAckMoveBuildObject.z)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
 
-#ifndef _MSC_VER
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int ReqUpBuildLv::kRowFieldNumber;
 const int ReqUpBuildLv::kObjectGuidFieldNumber;
-#endif  // !_MSC_VER
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 ReqUpBuildLv::ReqUpBuildLv()
-  : ::google::protobuf::Message() {
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_NFSLGDefine_2eproto::InitDefaults();
+  }
   SharedCtor();
+  // @@protoc_insertion_point(constructor:NFMsg.ReqUpBuildLv)
 }
-
-void ReqUpBuildLv::InitAsDefaultInstance() {
-  object_guid_ = const_cast< ::NFMsg::Ident*>(&::NFMsg::Ident::default_instance());
-}
-
 ReqUpBuildLv::ReqUpBuildLv(const ReqUpBuildLv& from)
-  : ::google::protobuf::Message() {
-  SharedCtor();
-  MergeFrom(from);
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_object_guid()) {
+    object_guid_ = new ::NFMsg::Ident(*from.object_guid_);
+  } else {
+    object_guid_ = NULL;
+  }
+  row_ = from.row_;
+  // @@protoc_insertion_point(copy_constructor:NFMsg.ReqUpBuildLv)
 }
 
 void ReqUpBuildLv::SharedCtor() {
   _cached_size_ = 0;
-  row_ = 0;
-  object_guid_ = NULL;
-  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  ::memset(&object_guid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&row_) -
+      reinterpret_cast<char*>(&object_guid_)) + sizeof(row_));
 }
 
 ReqUpBuildLv::~ReqUpBuildLv() {
+  // @@protoc_insertion_point(destructor:NFMsg.ReqUpBuildLv)
   SharedDtor();
 }
 
 void ReqUpBuildLv::SharedDtor() {
-  if (this != default_instance_) {
-    delete object_guid_;
-  }
+  if (this != internal_default_instance()) delete object_guid_;
 }
 
 void ReqUpBuildLv::SetCachedSize(int size) const {
@@ -1230,262 +1738,379 @@ void ReqUpBuildLv::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* ReqUpBuildLv::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return ReqUpBuildLv_descriptor_;
+  protobuf_NFSLGDefine_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_NFSLGDefine_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const ReqUpBuildLv& ReqUpBuildLv::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_NFSLGDefine_2eproto();
-  return *default_instance_;
+  protobuf_NFSLGDefine_2eproto::InitDefaults();
+  return *internal_default_instance();
 }
 
-ReqUpBuildLv* ReqUpBuildLv::default_instance_ = NULL;
-
-ReqUpBuildLv* ReqUpBuildLv::New() const {
-  return new ReqUpBuildLv;
+ReqUpBuildLv* ReqUpBuildLv::New(::google::protobuf::Arena* arena) const {
+  ReqUpBuildLv* n = new ReqUpBuildLv;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
 }
 
 void ReqUpBuildLv::Clear() {
-  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    row_ = 0;
-    if (has_object_guid()) {
-      if (object_guid_ != NULL) object_guid_->::NFMsg::Ident::Clear();
-    }
+// @@protoc_insertion_point(message_clear_start:NFMsg.ReqUpBuildLv)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (has_object_guid()) {
+    GOOGLE_DCHECK(object_guid_ != NULL);
+    object_guid_->::NFMsg::Ident::Clear();
   }
-  ::memset(_has_bits_, 0, sizeof(_has_bits_));
-  mutable_unknown_fields()->Clear();
+  row_ = 0;
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
 }
 
 bool ReqUpBuildLv::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  while ((tag = input->ReadTag()) != 0) {
+  // @@protoc_insertion_point(parse_start:NFMsg.ReqUpBuildLv)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // optional int32 row = 1;
       case 1: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
+          set_has_row();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, &row_)));
-          set_has_row();
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
-        if (input->ExpectTag(18)) goto parse_object_guid;
         break;
       }
 
       // required .NFMsg.Ident object_guid = 2;
       case 2: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
-         parse_object_guid:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_object_guid()));
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
-        if (input->ExpectAtEnd()) return true;
         break;
       }
 
       default: {
-      handle_uninterpreted:
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-          return true;
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
         }
         DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, mutable_unknown_fields()));
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
     }
   }
+success:
+  // @@protoc_insertion_point(parse_success:NFMsg.ReqUpBuildLv)
   return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:NFMsg.ReqUpBuildLv)
+  return false;
 #undef DO_
 }
 
 void ReqUpBuildLv::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:NFMsg.ReqUpBuildLv)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
   // optional int32 row = 1;
-  if (has_row()) {
+  if (cached_has_bits & 0x00000002u) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->row(), output);
   }
 
   // required .NFMsg.Ident object_guid = 2;
-  if (has_object_guid()) {
+  if (cached_has_bits & 0x00000001u) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, this->object_guid(), output);
+      2, *this->object_guid_, output);
   }
 
-  if (!unknown_fields().empty()) {
+  if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        unknown_fields(), output);
+        _internal_metadata_.unknown_fields(), output);
   }
+  // @@protoc_insertion_point(serialize_end:NFMsg.ReqUpBuildLv)
 }
 
-::google::protobuf::uint8* ReqUpBuildLv::SerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::google::protobuf::uint8* ReqUpBuildLv::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:NFMsg.ReqUpBuildLv)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
   // optional int32 row = 1;
-  if (has_row()) {
+  if (cached_has_bits & 0x00000002u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->row(), target);
   }
 
   // required .NFMsg.Ident object_guid = 2;
-  if (has_object_guid()) {
+  if (cached_has_bits & 0x00000001u) {
     target = ::google::protobuf::internal::WireFormatLite::
-      WriteMessageNoVirtualToArray(
-        2, this->object_guid(), target);
+      InternalWriteMessageNoVirtualToArray(
+        2, *this->object_guid_, deterministic, target);
   }
 
-  if (!unknown_fields().empty()) {
+  if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        unknown_fields(), target);
+        _internal_metadata_.unknown_fields(), target);
   }
+  // @@protoc_insertion_point(serialize_to_array_end:NFMsg.ReqUpBuildLv)
   return target;
 }
 
-int ReqUpBuildLv::ByteSize() const {
-  int total_size = 0;
+size_t ReqUpBuildLv::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:NFMsg.ReqUpBuildLv)
+  size_t total_size = 0;
 
-  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    // optional int32 row = 1;
-    if (has_row()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-          this->row());
-    }
-
-    // required .NFMsg.Ident object_guid = 2;
-    if (has_object_guid()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-          this->object_guid());
-    }
-
-  }
-  if (!unknown_fields().empty()) {
+  if (_internal_metadata_.have_unknown_fields()) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        unknown_fields());
+        _internal_metadata_.unknown_fields());
   }
+  // required .NFMsg.Ident object_guid = 2;
+  if (has_object_guid()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->object_guid_);
+  }
+  // optional int32 row = 1;
+  if (has_row()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->row());
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = total_size;
+  _cached_size_ = cached_size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
   return total_size;
 }
 
 void ReqUpBuildLv::MergeFrom(const ::google::protobuf::Message& from) {
-  GOOGLE_CHECK_NE(&from, this);
+// @@protoc_insertion_point(generalized_merge_from_start:NFMsg.ReqUpBuildLv)
+  GOOGLE_DCHECK_NE(&from, this);
   const ReqUpBuildLv* source =
-    ::google::protobuf::internal::dynamic_cast_if_available<const ReqUpBuildLv*>(
-      &from);
+      ::google::protobuf::internal::DynamicCastToGenerated<const ReqUpBuildLv>(
+          &from);
   if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:NFMsg.ReqUpBuildLv)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:NFMsg.ReqUpBuildLv)
     MergeFrom(*source);
   }
 }
 
 void ReqUpBuildLv::MergeFrom(const ReqUpBuildLv& from) {
-  GOOGLE_CHECK_NE(&from, this);
-  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    if (from.has_row()) {
-      set_row(from.row());
-    }
-    if (from.has_object_guid()) {
+// @@protoc_insertion_point(class_specific_merge_from_start:NFMsg.ReqUpBuildLv)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 3u) {
+    if (cached_has_bits & 0x00000001u) {
       mutable_object_guid()->::NFMsg::Ident::MergeFrom(from.object_guid());
     }
+    if (cached_has_bits & 0x00000002u) {
+      row_ = from.row_;
+    }
+    _has_bits_[0] |= cached_has_bits;
   }
-  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
 
 void ReqUpBuildLv::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:NFMsg.ReqUpBuildLv)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void ReqUpBuildLv::CopyFrom(const ReqUpBuildLv& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:NFMsg.ReqUpBuildLv)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 bool ReqUpBuildLv::IsInitialized() const {
-  if ((_has_bits_[0] & 0x00000002) != 0x00000002) return false;
-
+  if ((_has_bits_[0] & 0x00000001) != 0x00000001) return false;
   if (has_object_guid()) {
-    if (!this->object_guid().IsInitialized()) return false;
+    if (!this->object_guid_->IsInitialized()) return false;
   }
   return true;
 }
 
 void ReqUpBuildLv::Swap(ReqUpBuildLv* other) {
-  if (other != this) {
-    std::swap(row_, other->row_);
-    std::swap(object_guid_, other->object_guid_);
-    std::swap(_has_bits_[0], other->_has_bits_[0]);
-    _unknown_fields_.Swap(&other->_unknown_fields_);
-    std::swap(_cached_size_, other->_cached_size_);
-  }
+  if (other == this) return;
+  InternalSwap(other);
+}
+void ReqUpBuildLv::InternalSwap(ReqUpBuildLv* other) {
+  using std::swap;
+  swap(object_guid_, other->object_guid_);
+  swap(row_, other->row_);
+  swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata ReqUpBuildLv::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = ReqUpBuildLv_descriptor_;
-  metadata.reflection = ReqUpBuildLv_reflection_;
-  return metadata;
+  protobuf_NFSLGDefine_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_NFSLGDefine_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// ReqUpBuildLv
+
+// optional int32 row = 1;
+bool ReqUpBuildLv::has_row() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+void ReqUpBuildLv::set_has_row() {
+  _has_bits_[0] |= 0x00000002u;
+}
+void ReqUpBuildLv::clear_has_row() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+void ReqUpBuildLv::clear_row() {
+  row_ = 0;
+  clear_has_row();
+}
+::google::protobuf::int32 ReqUpBuildLv::row() const {
+  // @@protoc_insertion_point(field_get:NFMsg.ReqUpBuildLv.row)
+  return row_;
+}
+void ReqUpBuildLv::set_row(::google::protobuf::int32 value) {
+  set_has_row();
+  row_ = value;
+  // @@protoc_insertion_point(field_set:NFMsg.ReqUpBuildLv.row)
+}
+
+// required .NFMsg.Ident object_guid = 2;
+bool ReqUpBuildLv::has_object_guid() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+void ReqUpBuildLv::set_has_object_guid() {
+  _has_bits_[0] |= 0x00000001u;
+}
+void ReqUpBuildLv::clear_has_object_guid() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+void ReqUpBuildLv::clear_object_guid() {
+  if (object_guid_ != NULL) object_guid_->::NFMsg::Ident::Clear();
+  clear_has_object_guid();
+}
+const ::NFMsg::Ident& ReqUpBuildLv::object_guid() const {
+  const ::NFMsg::Ident* p = object_guid_;
+  // @@protoc_insertion_point(field_get:NFMsg.ReqUpBuildLv.object_guid)
+  return p != NULL ? *p : *reinterpret_cast<const ::NFMsg::Ident*>(
+      &::NFMsg::_Ident_default_instance_);
+}
+::NFMsg::Ident* ReqUpBuildLv::mutable_object_guid() {
+  set_has_object_guid();
+  if (object_guid_ == NULL) {
+    object_guid_ = new ::NFMsg::Ident;
+  }
+  // @@protoc_insertion_point(field_mutable:NFMsg.ReqUpBuildLv.object_guid)
+  return object_guid_;
+}
+::NFMsg::Ident* ReqUpBuildLv::release_object_guid() {
+  // @@protoc_insertion_point(field_release:NFMsg.ReqUpBuildLv.object_guid)
+  clear_has_object_guid();
+  ::NFMsg::Ident* temp = object_guid_;
+  object_guid_ = NULL;
+  return temp;
+}
+void ReqUpBuildLv::set_allocated_object_guid(::NFMsg::Ident* object_guid) {
+  delete object_guid_;
+  object_guid_ = object_guid;
+  if (object_guid) {
+    set_has_object_guid();
+  } else {
+    clear_has_object_guid();
+  }
+  // @@protoc_insertion_point(field_set_allocated:NFMsg.ReqUpBuildLv.object_guid)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
 
-#ifndef _MSC_VER
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int ReqCreateItem::kRowFieldNumber;
 const int ReqCreateItem::kObjectGuidFieldNumber;
 const int ReqCreateItem::kConfigIdFieldNumber;
 const int ReqCreateItem::kCountFieldNumber;
-#endif  // !_MSC_VER
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 ReqCreateItem::ReqCreateItem()
-  : ::google::protobuf::Message() {
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_NFSLGDefine_2eproto::InitDefaults();
+  }
   SharedCtor();
+  // @@protoc_insertion_point(constructor:NFMsg.ReqCreateItem)
 }
-
-void ReqCreateItem::InitAsDefaultInstance() {
-  object_guid_ = const_cast< ::NFMsg::Ident*>(&::NFMsg::Ident::default_instance());
-}
-
 ReqCreateItem::ReqCreateItem(const ReqCreateItem& from)
-  : ::google::protobuf::Message() {
-  SharedCtor();
-  MergeFrom(from);
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  config_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.has_config_id()) {
+    config_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.config_id_);
+  }
+  if (from.has_object_guid()) {
+    object_guid_ = new ::NFMsg::Ident(*from.object_guid_);
+  } else {
+    object_guid_ = NULL;
+  }
+  ::memcpy(&row_, &from.row_,
+    static_cast<size_t>(reinterpret_cast<char*>(&count_) -
+    reinterpret_cast<char*>(&row_)) + sizeof(count_));
+  // @@protoc_insertion_point(copy_constructor:NFMsg.ReqCreateItem)
 }
 
 void ReqCreateItem::SharedCtor() {
   _cached_size_ = 0;
-  row_ = 0;
-  object_guid_ = NULL;
-  config_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
-  count_ = 0;
-  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  config_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(&object_guid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&count_) -
+      reinterpret_cast<char*>(&object_guid_)) + sizeof(count_));
 }
 
 ReqCreateItem::~ReqCreateItem() {
+  // @@protoc_insertion_point(destructor:NFMsg.ReqCreateItem)
   SharedDtor();
 }
 
 void ReqCreateItem::SharedDtor() {
-  if (config_id_ != &::google::protobuf::internal::kEmptyString) {
-    delete config_id_;
-  }
-  if (this != default_instance_) {
-    delete object_guid_;
-  }
+  config_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (this != internal_default_instance()) delete object_guid_;
 }
 
 void ReqCreateItem::SetCachedSize(int size) const {
@@ -1494,347 +2119,580 @@ void ReqCreateItem::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* ReqCreateItem::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return ReqCreateItem_descriptor_;
+  protobuf_NFSLGDefine_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_NFSLGDefine_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const ReqCreateItem& ReqCreateItem::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_NFSLGDefine_2eproto();
-  return *default_instance_;
+  protobuf_NFSLGDefine_2eproto::InitDefaults();
+  return *internal_default_instance();
 }
 
-ReqCreateItem* ReqCreateItem::default_instance_ = NULL;
-
-ReqCreateItem* ReqCreateItem::New() const {
-  return new ReqCreateItem;
+ReqCreateItem* ReqCreateItem::New(::google::protobuf::Arena* arena) const {
+  ReqCreateItem* n = new ReqCreateItem;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
 }
 
 void ReqCreateItem::Clear() {
-  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    row_ = 0;
-    if (has_object_guid()) {
-      if (object_guid_ != NULL) object_guid_->::NFMsg::Ident::Clear();
+// @@protoc_insertion_point(message_clear_start:NFMsg.ReqCreateItem)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  if (cached_has_bits & 3u) {
+    if (cached_has_bits & 0x00000001u) {
+      GOOGLE_DCHECK(!config_id_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
+      (*config_id_.UnsafeRawStringPointer())->clear();
     }
-    if (has_config_id()) {
-      if (config_id_ != &::google::protobuf::internal::kEmptyString) {
-        config_id_->clear();
-      }
+    if (cached_has_bits & 0x00000002u) {
+      GOOGLE_DCHECK(object_guid_ != NULL);
+      object_guid_->::NFMsg::Ident::Clear();
     }
-    count_ = 0;
   }
-  ::memset(_has_bits_, 0, sizeof(_has_bits_));
-  mutable_unknown_fields()->Clear();
+  if (cached_has_bits & 12u) {
+    ::memset(&row_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&count_) -
+        reinterpret_cast<char*>(&row_)) + sizeof(count_));
+  }
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
 }
 
 bool ReqCreateItem::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  while ((tag = input->ReadTag()) != 0) {
+  // @@protoc_insertion_point(parse_start:NFMsg.ReqCreateItem)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // optional int32 row = 1;
       case 1: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
+          set_has_row();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, &row_)));
-          set_has_row();
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
-        if (input->ExpectTag(18)) goto parse_object_guid;
         break;
       }
 
       // required .NFMsg.Ident object_guid = 2;
       case 2: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
-         parse_object_guid:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_object_guid()));
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
-        if (input->ExpectTag(26)) goto parse_config_id;
         break;
       }
 
       // required string config_id = 3;
       case 3: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
-         parse_config_id:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_config_id()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
-            this->config_id().data(), this->config_id().length(),
-            ::google::protobuf::internal::WireFormat::PARSE);
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->config_id().data(), static_cast<int>(this->config_id().length()),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "NFMsg.ReqCreateItem.config_id");
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
-        if (input->ExpectTag(32)) goto parse_count;
         break;
       }
 
       // required int32 count = 4;
       case 4: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
-         parse_count:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(32u /* 32 & 0xFF */)) {
+          set_has_count();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, &count_)));
-          set_has_count();
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
-        if (input->ExpectAtEnd()) return true;
         break;
       }
 
       default: {
-      handle_uninterpreted:
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-          return true;
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
         }
         DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, mutable_unknown_fields()));
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
     }
   }
+success:
+  // @@protoc_insertion_point(parse_success:NFMsg.ReqCreateItem)
   return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:NFMsg.ReqCreateItem)
+  return false;
 #undef DO_
 }
 
 void ReqCreateItem::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:NFMsg.ReqCreateItem)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
   // optional int32 row = 1;
-  if (has_row()) {
+  if (cached_has_bits & 0x00000004u) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->row(), output);
   }
 
   // required .NFMsg.Ident object_guid = 2;
-  if (has_object_guid()) {
+  if (cached_has_bits & 0x00000002u) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, this->object_guid(), output);
+      2, *this->object_guid_, output);
   }
 
   // required string config_id = 3;
-  if (has_config_id()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
-      this->config_id().data(), this->config_id().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE);
-    ::google::protobuf::internal::WireFormatLite::WriteString(
+  if (cached_has_bits & 0x00000001u) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->config_id().data(), static_cast<int>(this->config_id().length()),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "NFMsg.ReqCreateItem.config_id");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       3, this->config_id(), output);
   }
 
   // required int32 count = 4;
-  if (has_count()) {
+  if (cached_has_bits & 0x00000008u) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32(4, this->count(), output);
   }
 
-  if (!unknown_fields().empty()) {
+  if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        unknown_fields(), output);
+        _internal_metadata_.unknown_fields(), output);
   }
+  // @@protoc_insertion_point(serialize_end:NFMsg.ReqCreateItem)
 }
 
-::google::protobuf::uint8* ReqCreateItem::SerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::google::protobuf::uint8* ReqCreateItem::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:NFMsg.ReqCreateItem)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
   // optional int32 row = 1;
-  if (has_row()) {
+  if (cached_has_bits & 0x00000004u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->row(), target);
   }
 
   // required .NFMsg.Ident object_guid = 2;
-  if (has_object_guid()) {
+  if (cached_has_bits & 0x00000002u) {
     target = ::google::protobuf::internal::WireFormatLite::
-      WriteMessageNoVirtualToArray(
-        2, this->object_guid(), target);
+      InternalWriteMessageNoVirtualToArray(
+        2, *this->object_guid_, deterministic, target);
   }
 
   // required string config_id = 3;
-  if (has_config_id()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
-      this->config_id().data(), this->config_id().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE);
+  if (cached_has_bits & 0x00000001u) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->config_id().data(), static_cast<int>(this->config_id().length()),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "NFMsg.ReqCreateItem.config_id");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         3, this->config_id(), target);
   }
 
   // required int32 count = 4;
-  if (has_count()) {
+  if (cached_has_bits & 0x00000008u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(4, this->count(), target);
   }
 
-  if (!unknown_fields().empty()) {
+  if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        unknown_fields(), target);
+        _internal_metadata_.unknown_fields(), target);
   }
+  // @@protoc_insertion_point(serialize_to_array_end:NFMsg.ReqCreateItem)
   return target;
 }
 
-int ReqCreateItem::ByteSize() const {
-  int total_size = 0;
+size_t ReqCreateItem::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:NFMsg.ReqCreateItem)
+  size_t total_size = 0;
 
-  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    // optional int32 row = 1;
-    if (has_row()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-          this->row());
-    }
-
-    // required .NFMsg.Ident object_guid = 2;
-    if (has_object_guid()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-          this->object_guid());
-    }
-
+  if (has_config_id()) {
     // required string config_id = 3;
-    if (has_config_id()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::StringSize(
-          this->config_id());
-    }
-
-    // required int32 count = 4;
-    if (has_count()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-          this->count());
-    }
-
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->config_id());
   }
-  if (!unknown_fields().empty()) {
+
+  if (has_object_guid()) {
+    // required .NFMsg.Ident object_guid = 2;
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->object_guid_);
+  }
+
+  if (has_count()) {
+    // required int32 count = 4;
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->count());
+  }
+
+  return total_size;
+}
+size_t ReqCreateItem::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:NFMsg.ReqCreateItem)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        unknown_fields());
+        _internal_metadata_.unknown_fields());
   }
+  if (((_has_bits_[0] & 0x0000000b) ^ 0x0000000b) == 0) {  // All required fields are present.
+    // required string config_id = 3;
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->config_id());
+
+    // required .NFMsg.Ident object_guid = 2;
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->object_guid_);
+
+    // required int32 count = 4;
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->count());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  // optional int32 row = 1;
+  if (has_row()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->row());
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = total_size;
+  _cached_size_ = cached_size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
   return total_size;
 }
 
 void ReqCreateItem::MergeFrom(const ::google::protobuf::Message& from) {
-  GOOGLE_CHECK_NE(&from, this);
+// @@protoc_insertion_point(generalized_merge_from_start:NFMsg.ReqCreateItem)
+  GOOGLE_DCHECK_NE(&from, this);
   const ReqCreateItem* source =
-    ::google::protobuf::internal::dynamic_cast_if_available<const ReqCreateItem*>(
-      &from);
+      ::google::protobuf::internal::DynamicCastToGenerated<const ReqCreateItem>(
+          &from);
   if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:NFMsg.ReqCreateItem)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:NFMsg.ReqCreateItem)
     MergeFrom(*source);
   }
 }
 
 void ReqCreateItem::MergeFrom(const ReqCreateItem& from) {
-  GOOGLE_CHECK_NE(&from, this);
-  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    if (from.has_row()) {
-      set_row(from.row());
+// @@protoc_insertion_point(class_specific_merge_from_start:NFMsg.ReqCreateItem)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 15u) {
+    if (cached_has_bits & 0x00000001u) {
+      set_has_config_id();
+      config_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.config_id_);
     }
-    if (from.has_object_guid()) {
+    if (cached_has_bits & 0x00000002u) {
       mutable_object_guid()->::NFMsg::Ident::MergeFrom(from.object_guid());
     }
-    if (from.has_config_id()) {
-      set_config_id(from.config_id());
+    if (cached_has_bits & 0x00000004u) {
+      row_ = from.row_;
     }
-    if (from.has_count()) {
-      set_count(from.count());
+    if (cached_has_bits & 0x00000008u) {
+      count_ = from.count_;
     }
+    _has_bits_[0] |= cached_has_bits;
   }
-  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
 
 void ReqCreateItem::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:NFMsg.ReqCreateItem)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void ReqCreateItem::CopyFrom(const ReqCreateItem& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:NFMsg.ReqCreateItem)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 bool ReqCreateItem::IsInitialized() const {
-  if ((_has_bits_[0] & 0x0000000e) != 0x0000000e) return false;
-
+  if ((_has_bits_[0] & 0x0000000b) != 0x0000000b) return false;
   if (has_object_guid()) {
-    if (!this->object_guid().IsInitialized()) return false;
+    if (!this->object_guid_->IsInitialized()) return false;
   }
   return true;
 }
 
 void ReqCreateItem::Swap(ReqCreateItem* other) {
-  if (other != this) {
-    std::swap(row_, other->row_);
-    std::swap(object_guid_, other->object_guid_);
-    std::swap(config_id_, other->config_id_);
-    std::swap(count_, other->count_);
-    std::swap(_has_bits_[0], other->_has_bits_[0]);
-    _unknown_fields_.Swap(&other->_unknown_fields_);
-    std::swap(_cached_size_, other->_cached_size_);
-  }
+  if (other == this) return;
+  InternalSwap(other);
+}
+void ReqCreateItem::InternalSwap(ReqCreateItem* other) {
+  using std::swap;
+  config_id_.Swap(&other->config_id_);
+  swap(object_guid_, other->object_guid_);
+  swap(row_, other->row_);
+  swap(count_, other->count_);
+  swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata ReqCreateItem::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = ReqCreateItem_descriptor_;
-  metadata.reflection = ReqCreateItem_reflection_;
-  return metadata;
+  protobuf_NFSLGDefine_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_NFSLGDefine_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// ReqCreateItem
+
+// optional int32 row = 1;
+bool ReqCreateItem::has_row() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+void ReqCreateItem::set_has_row() {
+  _has_bits_[0] |= 0x00000004u;
+}
+void ReqCreateItem::clear_has_row() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+void ReqCreateItem::clear_row() {
+  row_ = 0;
+  clear_has_row();
+}
+::google::protobuf::int32 ReqCreateItem::row() const {
+  // @@protoc_insertion_point(field_get:NFMsg.ReqCreateItem.row)
+  return row_;
+}
+void ReqCreateItem::set_row(::google::protobuf::int32 value) {
+  set_has_row();
+  row_ = value;
+  // @@protoc_insertion_point(field_set:NFMsg.ReqCreateItem.row)
+}
+
+// required .NFMsg.Ident object_guid = 2;
+bool ReqCreateItem::has_object_guid() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+void ReqCreateItem::set_has_object_guid() {
+  _has_bits_[0] |= 0x00000002u;
+}
+void ReqCreateItem::clear_has_object_guid() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+void ReqCreateItem::clear_object_guid() {
+  if (object_guid_ != NULL) object_guid_->::NFMsg::Ident::Clear();
+  clear_has_object_guid();
+}
+const ::NFMsg::Ident& ReqCreateItem::object_guid() const {
+  const ::NFMsg::Ident* p = object_guid_;
+  // @@protoc_insertion_point(field_get:NFMsg.ReqCreateItem.object_guid)
+  return p != NULL ? *p : *reinterpret_cast<const ::NFMsg::Ident*>(
+      &::NFMsg::_Ident_default_instance_);
+}
+::NFMsg::Ident* ReqCreateItem::mutable_object_guid() {
+  set_has_object_guid();
+  if (object_guid_ == NULL) {
+    object_guid_ = new ::NFMsg::Ident;
+  }
+  // @@protoc_insertion_point(field_mutable:NFMsg.ReqCreateItem.object_guid)
+  return object_guid_;
+}
+::NFMsg::Ident* ReqCreateItem::release_object_guid() {
+  // @@protoc_insertion_point(field_release:NFMsg.ReqCreateItem.object_guid)
+  clear_has_object_guid();
+  ::NFMsg::Ident* temp = object_guid_;
+  object_guid_ = NULL;
+  return temp;
+}
+void ReqCreateItem::set_allocated_object_guid(::NFMsg::Ident* object_guid) {
+  delete object_guid_;
+  object_guid_ = object_guid;
+  if (object_guid) {
+    set_has_object_guid();
+  } else {
+    clear_has_object_guid();
+  }
+  // @@protoc_insertion_point(field_set_allocated:NFMsg.ReqCreateItem.object_guid)
+}
+
+// required string config_id = 3;
+bool ReqCreateItem::has_config_id() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+void ReqCreateItem::set_has_config_id() {
+  _has_bits_[0] |= 0x00000001u;
+}
+void ReqCreateItem::clear_has_config_id() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+void ReqCreateItem::clear_config_id() {
+  config_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_config_id();
+}
+const ::std::string& ReqCreateItem::config_id() const {
+  // @@protoc_insertion_point(field_get:NFMsg.ReqCreateItem.config_id)
+  return config_id_.GetNoArena();
+}
+void ReqCreateItem::set_config_id(const ::std::string& value) {
+  set_has_config_id();
+  config_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:NFMsg.ReqCreateItem.config_id)
+}
+#if LANG_CXX11
+void ReqCreateItem::set_config_id(::std::string&& value) {
+  set_has_config_id();
+  config_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:NFMsg.ReqCreateItem.config_id)
+}
+#endif
+void ReqCreateItem::set_config_id(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  set_has_config_id();
+  config_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:NFMsg.ReqCreateItem.config_id)
+}
+void ReqCreateItem::set_config_id(const char* value, size_t size) {
+  set_has_config_id();
+  config_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:NFMsg.ReqCreateItem.config_id)
+}
+::std::string* ReqCreateItem::mutable_config_id() {
+  set_has_config_id();
+  // @@protoc_insertion_point(field_mutable:NFMsg.ReqCreateItem.config_id)
+  return config_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* ReqCreateItem::release_config_id() {
+  // @@protoc_insertion_point(field_release:NFMsg.ReqCreateItem.config_id)
+  clear_has_config_id();
+  return config_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void ReqCreateItem::set_allocated_config_id(::std::string* config_id) {
+  if (config_id != NULL) {
+    set_has_config_id();
+  } else {
+    clear_has_config_id();
+  }
+  config_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), config_id);
+  // @@protoc_insertion_point(field_set_allocated:NFMsg.ReqCreateItem.config_id)
+}
+
+// required int32 count = 4;
+bool ReqCreateItem::has_count() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+void ReqCreateItem::set_has_count() {
+  _has_bits_[0] |= 0x00000008u;
+}
+void ReqCreateItem::clear_has_count() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+void ReqCreateItem::clear_count() {
+  count_ = 0;
+  clear_has_count();
+}
+::google::protobuf::int32 ReqCreateItem::count() const {
+  // @@protoc_insertion_point(field_get:NFMsg.ReqCreateItem.count)
+  return count_;
+}
+void ReqCreateItem::set_count(::google::protobuf::int32 value) {
+  set_has_count();
+  count_ = value;
+  // @@protoc_insertion_point(field_set:NFMsg.ReqCreateItem.count)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
 
-#ifndef _MSC_VER
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int ReqBuildOperate::kRowFieldNumber;
 const int ReqBuildOperate::kObjectGuidFieldNumber;
 const int ReqBuildOperate::kFunctypeFieldNumber;
-#endif  // !_MSC_VER
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 ReqBuildOperate::ReqBuildOperate()
-  : ::google::protobuf::Message() {
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_NFSLGDefine_2eproto::InitDefaults();
+  }
   SharedCtor();
+  // @@protoc_insertion_point(constructor:NFMsg.ReqBuildOperate)
 }
-
-void ReqBuildOperate::InitAsDefaultInstance() {
-  object_guid_ = const_cast< ::NFMsg::Ident*>(&::NFMsg::Ident::default_instance());
-}
-
 ReqBuildOperate::ReqBuildOperate(const ReqBuildOperate& from)
-  : ::google::protobuf::Message() {
-  SharedCtor();
-  MergeFrom(from);
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_object_guid()) {
+    object_guid_ = new ::NFMsg::Ident(*from.object_guid_);
+  } else {
+    object_guid_ = NULL;
+  }
+  ::memcpy(&row_, &from.row_,
+    static_cast<size_t>(reinterpret_cast<char*>(&functype_) -
+    reinterpret_cast<char*>(&row_)) + sizeof(functype_));
+  // @@protoc_insertion_point(copy_constructor:NFMsg.ReqBuildOperate)
 }
 
 void ReqBuildOperate::SharedCtor() {
   _cached_size_ = 0;
-  row_ = 0;
-  object_guid_ = NULL;
-  functype_ = 0;
-  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  ::memset(&object_guid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&functype_) -
+      reinterpret_cast<char*>(&object_guid_)) + sizeof(functype_));
 }
 
 ReqBuildOperate::~ReqBuildOperate() {
+  // @@protoc_insertion_point(destructor:NFMsg.ReqBuildOperate)
   SharedDtor();
 }
 
 void ReqBuildOperate::SharedDtor() {
-  if (this != default_instance_) {
-    delete object_guid_;
-  }
+  if (this != internal_default_instance()) delete object_guid_;
 }
 
 void ReqBuildOperate::SetCachedSize(int size) const {
@@ -1843,73 +2701,83 @@ void ReqBuildOperate::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* ReqBuildOperate::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return ReqBuildOperate_descriptor_;
+  protobuf_NFSLGDefine_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_NFSLGDefine_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const ReqBuildOperate& ReqBuildOperate::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_NFSLGDefine_2eproto();
-  return *default_instance_;
+  protobuf_NFSLGDefine_2eproto::InitDefaults();
+  return *internal_default_instance();
 }
 
-ReqBuildOperate* ReqBuildOperate::default_instance_ = NULL;
-
-ReqBuildOperate* ReqBuildOperate::New() const {
-  return new ReqBuildOperate;
+ReqBuildOperate* ReqBuildOperate::New(::google::protobuf::Arena* arena) const {
+  ReqBuildOperate* n = new ReqBuildOperate;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
 }
 
 void ReqBuildOperate::Clear() {
-  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    row_ = 0;
-    if (has_object_guid()) {
-      if (object_guid_ != NULL) object_guid_->::NFMsg::Ident::Clear();
-    }
-    functype_ = 0;
+// @@protoc_insertion_point(message_clear_start:NFMsg.ReqBuildOperate)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (has_object_guid()) {
+    GOOGLE_DCHECK(object_guid_ != NULL);
+    object_guid_->::NFMsg::Ident::Clear();
   }
-  ::memset(_has_bits_, 0, sizeof(_has_bits_));
-  mutable_unknown_fields()->Clear();
+  cached_has_bits = _has_bits_[0];
+  if (cached_has_bits & 6u) {
+    ::memset(&row_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&functype_) -
+        reinterpret_cast<char*>(&row_)) + sizeof(functype_));
+  }
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
 }
 
 bool ReqBuildOperate::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  while ((tag = input->ReadTag()) != 0) {
+  // @@protoc_insertion_point(parse_start:NFMsg.ReqBuildOperate)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // optional int32 row = 1;
       case 1: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
+          set_has_row();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, &row_)));
-          set_has_row();
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
-        if (input->ExpectTag(18)) goto parse_object_guid;
         break;
       }
 
       // required .NFMsg.Ident object_guid = 2;
       case 2: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
-         parse_object_guid:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_object_guid()));
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
-        if (input->ExpectTag(24)) goto parse_functype;
         break;
       }
 
       // required .NFMsg.ESLGFuncType functype = 3;
       case 3: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
-         parse_functype:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
@@ -1917,187 +2785,332 @@ bool ReqBuildOperate::MergePartialFromCodedStream(
           if (::NFMsg::ESLGFuncType_IsValid(value)) {
             set_functype(static_cast< ::NFMsg::ESLGFuncType >(value));
           } else {
-            mutable_unknown_fields()->AddVarint(3, value);
+            mutable_unknown_fields()->AddVarint(
+                3, static_cast< ::google::protobuf::uint64>(value));
           }
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
-        if (input->ExpectAtEnd()) return true;
         break;
       }
 
       default: {
-      handle_uninterpreted:
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-          return true;
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
         }
         DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, mutable_unknown_fields()));
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
     }
   }
+success:
+  // @@protoc_insertion_point(parse_success:NFMsg.ReqBuildOperate)
   return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:NFMsg.ReqBuildOperate)
+  return false;
 #undef DO_
 }
 
 void ReqBuildOperate::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:NFMsg.ReqBuildOperate)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
   // optional int32 row = 1;
-  if (has_row()) {
+  if (cached_has_bits & 0x00000002u) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->row(), output);
   }
 
   // required .NFMsg.Ident object_guid = 2;
-  if (has_object_guid()) {
+  if (cached_has_bits & 0x00000001u) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, this->object_guid(), output);
+      2, *this->object_guid_, output);
   }
 
   // required .NFMsg.ESLGFuncType functype = 3;
-  if (has_functype()) {
+  if (cached_has_bits & 0x00000004u) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
       3, this->functype(), output);
   }
 
-  if (!unknown_fields().empty()) {
+  if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        unknown_fields(), output);
+        _internal_metadata_.unknown_fields(), output);
   }
+  // @@protoc_insertion_point(serialize_end:NFMsg.ReqBuildOperate)
 }
 
-::google::protobuf::uint8* ReqBuildOperate::SerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::google::protobuf::uint8* ReqBuildOperate::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:NFMsg.ReqBuildOperate)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
   // optional int32 row = 1;
-  if (has_row()) {
+  if (cached_has_bits & 0x00000002u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->row(), target);
   }
 
   // required .NFMsg.Ident object_guid = 2;
-  if (has_object_guid()) {
+  if (cached_has_bits & 0x00000001u) {
     target = ::google::protobuf::internal::WireFormatLite::
-      WriteMessageNoVirtualToArray(
-        2, this->object_guid(), target);
+      InternalWriteMessageNoVirtualToArray(
+        2, *this->object_guid_, deterministic, target);
   }
 
   // required .NFMsg.ESLGFuncType functype = 3;
-  if (has_functype()) {
+  if (cached_has_bits & 0x00000004u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
       3, this->functype(), target);
   }
 
-  if (!unknown_fields().empty()) {
+  if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        unknown_fields(), target);
+        _internal_metadata_.unknown_fields(), target);
   }
+  // @@protoc_insertion_point(serialize_to_array_end:NFMsg.ReqBuildOperate)
   return target;
 }
 
-int ReqBuildOperate::ByteSize() const {
-  int total_size = 0;
+size_t ReqBuildOperate::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:NFMsg.ReqBuildOperate)
+  size_t total_size = 0;
 
-  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    // optional int32 row = 1;
-    if (has_row()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-          this->row());
-    }
-
+  if (has_object_guid()) {
     // required .NFMsg.Ident object_guid = 2;
-    if (has_object_guid()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-          this->object_guid());
-    }
-
-    // required .NFMsg.ESLGFuncType functype = 3;
-    if (has_functype()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::EnumSize(this->functype());
-    }
-
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->object_guid_);
   }
-  if (!unknown_fields().empty()) {
+
+  if (has_functype()) {
+    // required .NFMsg.ESLGFuncType functype = 3;
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::EnumSize(this->functype());
+  }
+
+  return total_size;
+}
+size_t ReqBuildOperate::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:NFMsg.ReqBuildOperate)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        unknown_fields());
+        _internal_metadata_.unknown_fields());
   }
+  if (((_has_bits_[0] & 0x00000005) ^ 0x00000005) == 0) {  // All required fields are present.
+    // required .NFMsg.Ident object_guid = 2;
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->object_guid_);
+
+    // required .NFMsg.ESLGFuncType functype = 3;
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::EnumSize(this->functype());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  // optional int32 row = 1;
+  if (has_row()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->row());
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = total_size;
+  _cached_size_ = cached_size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
   return total_size;
 }
 
 void ReqBuildOperate::MergeFrom(const ::google::protobuf::Message& from) {
-  GOOGLE_CHECK_NE(&from, this);
+// @@protoc_insertion_point(generalized_merge_from_start:NFMsg.ReqBuildOperate)
+  GOOGLE_DCHECK_NE(&from, this);
   const ReqBuildOperate* source =
-    ::google::protobuf::internal::dynamic_cast_if_available<const ReqBuildOperate*>(
-      &from);
+      ::google::protobuf::internal::DynamicCastToGenerated<const ReqBuildOperate>(
+          &from);
   if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:NFMsg.ReqBuildOperate)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:NFMsg.ReqBuildOperate)
     MergeFrom(*source);
   }
 }
 
 void ReqBuildOperate::MergeFrom(const ReqBuildOperate& from) {
-  GOOGLE_CHECK_NE(&from, this);
-  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    if (from.has_row()) {
-      set_row(from.row());
-    }
-    if (from.has_object_guid()) {
+// @@protoc_insertion_point(class_specific_merge_from_start:NFMsg.ReqBuildOperate)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 7u) {
+    if (cached_has_bits & 0x00000001u) {
       mutable_object_guid()->::NFMsg::Ident::MergeFrom(from.object_guid());
     }
-    if (from.has_functype()) {
-      set_functype(from.functype());
+    if (cached_has_bits & 0x00000002u) {
+      row_ = from.row_;
     }
+    if (cached_has_bits & 0x00000004u) {
+      functype_ = from.functype_;
+    }
+    _has_bits_[0] |= cached_has_bits;
   }
-  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
 
 void ReqBuildOperate::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:NFMsg.ReqBuildOperate)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void ReqBuildOperate::CopyFrom(const ReqBuildOperate& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:NFMsg.ReqBuildOperate)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 bool ReqBuildOperate::IsInitialized() const {
-  if ((_has_bits_[0] & 0x00000006) != 0x00000006) return false;
-
+  if ((_has_bits_[0] & 0x00000005) != 0x00000005) return false;
   if (has_object_guid()) {
-    if (!this->object_guid().IsInitialized()) return false;
+    if (!this->object_guid_->IsInitialized()) return false;
   }
   return true;
 }
 
 void ReqBuildOperate::Swap(ReqBuildOperate* other) {
-  if (other != this) {
-    std::swap(row_, other->row_);
-    std::swap(object_guid_, other->object_guid_);
-    std::swap(functype_, other->functype_);
-    std::swap(_has_bits_[0], other->_has_bits_[0]);
-    _unknown_fields_.Swap(&other->_unknown_fields_);
-    std::swap(_cached_size_, other->_cached_size_);
-  }
+  if (other == this) return;
+  InternalSwap(other);
+}
+void ReqBuildOperate::InternalSwap(ReqBuildOperate* other) {
+  using std::swap;
+  swap(object_guid_, other->object_guid_);
+  swap(row_, other->row_);
+  swap(functype_, other->functype_);
+  swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata ReqBuildOperate::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = ReqBuildOperate_descriptor_;
-  metadata.reflection = ReqBuildOperate_reflection_;
-  return metadata;
+  protobuf_NFSLGDefine_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_NFSLGDefine_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// ReqBuildOperate
+
+// optional int32 row = 1;
+bool ReqBuildOperate::has_row() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+void ReqBuildOperate::set_has_row() {
+  _has_bits_[0] |= 0x00000002u;
+}
+void ReqBuildOperate::clear_has_row() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+void ReqBuildOperate::clear_row() {
+  row_ = 0;
+  clear_has_row();
+}
+::google::protobuf::int32 ReqBuildOperate::row() const {
+  // @@protoc_insertion_point(field_get:NFMsg.ReqBuildOperate.row)
+  return row_;
+}
+void ReqBuildOperate::set_row(::google::protobuf::int32 value) {
+  set_has_row();
+  row_ = value;
+  // @@protoc_insertion_point(field_set:NFMsg.ReqBuildOperate.row)
+}
+
+// required .NFMsg.Ident object_guid = 2;
+bool ReqBuildOperate::has_object_guid() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+void ReqBuildOperate::set_has_object_guid() {
+  _has_bits_[0] |= 0x00000001u;
+}
+void ReqBuildOperate::clear_has_object_guid() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+void ReqBuildOperate::clear_object_guid() {
+  if (object_guid_ != NULL) object_guid_->::NFMsg::Ident::Clear();
+  clear_has_object_guid();
+}
+const ::NFMsg::Ident& ReqBuildOperate::object_guid() const {
+  const ::NFMsg::Ident* p = object_guid_;
+  // @@protoc_insertion_point(field_get:NFMsg.ReqBuildOperate.object_guid)
+  return p != NULL ? *p : *reinterpret_cast<const ::NFMsg::Ident*>(
+      &::NFMsg::_Ident_default_instance_);
+}
+::NFMsg::Ident* ReqBuildOperate::mutable_object_guid() {
+  set_has_object_guid();
+  if (object_guid_ == NULL) {
+    object_guid_ = new ::NFMsg::Ident;
+  }
+  // @@protoc_insertion_point(field_mutable:NFMsg.ReqBuildOperate.object_guid)
+  return object_guid_;
+}
+::NFMsg::Ident* ReqBuildOperate::release_object_guid() {
+  // @@protoc_insertion_point(field_release:NFMsg.ReqBuildOperate.object_guid)
+  clear_has_object_guid();
+  ::NFMsg::Ident* temp = object_guid_;
+  object_guid_ = NULL;
+  return temp;
+}
+void ReqBuildOperate::set_allocated_object_guid(::NFMsg::Ident* object_guid) {
+  delete object_guid_;
+  object_guid_ = object_guid;
+  if (object_guid) {
+    set_has_object_guid();
+  } else {
+    clear_has_object_guid();
+  }
+  // @@protoc_insertion_point(field_set_allocated:NFMsg.ReqBuildOperate.object_guid)
+}
+
+// required .NFMsg.ESLGFuncType functype = 3;
+bool ReqBuildOperate::has_functype() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+void ReqBuildOperate::set_has_functype() {
+  _has_bits_[0] |= 0x00000004u;
+}
+void ReqBuildOperate::clear_has_functype() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+void ReqBuildOperate::clear_functype() {
+  functype_ = 0;
+  clear_has_functype();
+}
+::NFMsg::ESLGFuncType ReqBuildOperate::functype() const {
+  // @@protoc_insertion_point(field_get:NFMsg.ReqBuildOperate.functype)
+  return static_cast< ::NFMsg::ESLGFuncType >(functype_);
+}
+void ReqBuildOperate::set_functype(::NFMsg::ESLGFuncType value) {
+  assert(::NFMsg::ESLGFuncType_IsValid(value));
+  set_has_functype();
+  functype_ = value;
+  // @@protoc_insertion_point(field_set:NFMsg.ReqBuildOperate.functype)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // @@protoc_insertion_point(namespace_scope)
 
