@@ -1,4 +1,7 @@
 set(ProjectName "NFMessageDefine")
+
+include(FindProtobuf)
+
 file(GLOB NFMessageDefine_ROOT_Cpp *.cpp)
 file(GLOB NFMessageDefine_ROOT_CC *.cc)
 file(GLOB NFMessageDefine_ROOT_Hpp *.h)
@@ -14,7 +17,9 @@ if(UNIX)
 	else()
 		target_link_libraries(NFMessageDefine )
 	endif()
-	
+
+    target_include_directories(NFMessageDefine PRIVATE ${PROTUBUF_INCLUDE_DIR})
+    target_link_libraries(NFMessageDefine ${PROTOBUF_LIBRARY})
 else()
 	add_dependencies(NFMessageDefine libprotobuf)
 	target_link_libraries(NFMessageDefine  libprotobuf )

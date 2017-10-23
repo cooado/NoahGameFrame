@@ -26,6 +26,7 @@ if(UNIX)
 		target_link_libraries(NFNetPlugin libevent_core.a)
 		target_link_libraries(NFNetPlugin libprotobuf.so)
 	endif()
+		target_link_libraries(NFNetPlugin NFMessageDefine)
 		add_definitions(
 			-D_USRDLL
 			-DTHERON_CPP11
