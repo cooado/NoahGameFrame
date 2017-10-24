@@ -43,12 +43,12 @@ bool NFCWebsocketModule::Execute()
 
 void NFCWebsocketModule::SetReceiveCallBack(NF_WS_MSG_CALL_BACK_PTR functorPtr)
 {
-	m_pRecvMsgCB = functorPtr;
+//	m_pRecvMsgCB = functorPtr;
 }
 
 void NFCWebsocketModule::SetEventCallBack(NF_WS_EVENT_CALL_BACK_PTR functorPtr)
 {
-	m_pEvtCB = functorPtr;
+//	m_pEvtCB = functorPtr;
 }
 
 int NFCWebsocketModule::Initialization(const unsigned int nMaxClient, const unsigned short nPort, const int nCpuCount /*= 4*/)
@@ -56,18 +56,18 @@ int NFCWebsocketModule::Initialization(const unsigned int nMaxClient, const unsi
 	return m_pWSServer->Initialization(nMaxClient,nPort,nCpuCount);
 }
 
-void NFCWebsocketModule::OnWebsocketMessage(websocketpp::connection_hdl hd, const std::string & strPayload)
+void NFCWebsocketModule::OnWebsocketMessage(websocketpp::connection_hdl hd, const std::string & strPayload, WSObjectPtr obj_)
 {
-	if (m_pRecvMsgCB.get())
-	{
-		m_pRecvMsgCB->operator()(hd, strPayload);
-	}
+//	if (m_pRecvMsgCB.get())
+//	{
+//		m_pRecvMsgCB->operator()(hd, strPayload);
+//	}
 }
 
-void NFCWebsocketModule::OnWebsocketEvent(websocketpp::connection_hdl hd, NF_WS_EVENT evt)
+void NFCWebsocketModule::OnWebsocketEvent(websocketpp::connection_hdl hd, NF_WS_EVENT evt, WSObjectPtr obj_)
 {
-	if (m_pEvtCB.get())
-	{
-		m_pEvtCB->operator()(hd, evt);
-	}
+//	if (m_pEvtCB.get())
+//	{
+//		m_pEvtCB->operator()(hd, evt);
+//	}
 }

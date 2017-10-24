@@ -33,13 +33,13 @@ public:
 	virtual int Initialization(const unsigned int nMaxClient, const unsigned short nPort, const int nCpuCount = 4) override;
 
 private:
-	void OnWebsocketMessage(websocketpp::connection_hdl, const std::string&);
-	void OnWebsocketEvent(websocketpp::connection_hdl, NF_WS_EVENT);
+	void OnWebsocketMessage(websocketpp::connection_hdl, const std::string&, WSObjectPtr obj_);
+	void OnWebsocketEvent(websocketpp::connection_hdl, NF_WS_EVENT, WSObjectPtr obj_);
 
 private:
 	NFCWS*					m_pWSServer;	
-	NF_WS_MSG_CALL_BACK_PTR	m_pRecvMsgCB;
-	NF_WS_EVENT_CALL_BACK_PTR m_pEvtCB;
+//	NF_WS_MSG_CALL_BACK_PTR	m_pRecvMsgCB;
+//	NF_WS_EVENT_CALL_BACK_PTR m_pEvtCB;
 
 };
 

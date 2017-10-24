@@ -74,12 +74,6 @@ enum NF_WS_EVENT
 	NF_WS_EVENT_MSG = 0x10				//websocket message 
 };
 
-typedef std::function<void(websocketpp::connection_hdl,const std::string&) >			NF_WS_MSG_CALL_BACK;
-typedef std::shared_ptr<NF_WS_MSG_CALL_BACK> NF_WS_MSG_CALL_BACK_PTR;
-
-typedef std::function<void(websocketpp::connection_hdl,NF_WS_EVENT) > 					NF_WS_EVENT_CALL_BACK;
-typedef std::shared_ptr<NF_WS_EVENT_CALL_BACK> NF_WS_EVENT_CALL_BACK_PTR;
-
 struct WSObject
 {
 	bool	bNeedRemove = false;
@@ -92,9 +86,16 @@ struct WSObject
 	{
 		bNeedRemove = b;
 	}
+	void*	t = nullptr;	// 用于存储该连接的额外信息
 };
 
 typedef std::shared_ptr<WSObject> WSObjectPtr;
+
+typedef std::function<void(websocketpp::connection_hdl,const std::string&, WSObjectPtr) >			NF_WS_MSG_CALL_BACK;
+typedef std::shared_ptr<NF_WS_MSG_CALL_BACK> NF_WS_MSG_CALL_BACK_PTR;
+
+typedef std::function<void(websocketpp::connection_hdl,NF_WS_EVENT, WSObjectPtr) > 					NF_WS_EVENT_CALL_BACK;
+typedef std::shared_ptr<NF_WS_EVENT_CALL_BACK> NF_WS_EVENT_CALL_BACK_PTR;
 
 class NFIWS
 {

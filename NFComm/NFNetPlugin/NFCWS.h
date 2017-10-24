@@ -17,10 +17,10 @@ class NFCWS : public NFIWS
 {
 public:
     template<typename BaseType>
-	NFCWS(BaseType* pBaseType, void (BaseType::*handleRecieve)(websocketpp::connection_hdl, const std::string&), void (BaseType::*handleEvent)(websocketpp::connection_hdl, NF_WS_EVENT))
+	NFCWS(BaseType* pBaseType, void (BaseType::*handleRecieve)(websocketpp::connection_hdl, const std::string&, WSObjectPtr), void (BaseType::*handleEvent)(websocketpp::connection_hdl, NF_WS_EVENT, WSObjectPtr))
     {
-        mRecvCB = std::bind(handleRecieve, pBaseType, std::placeholders::_1, std::placeholders::_2);
-        mEventCB = std::bind(handleEvent, pBaseType, std::placeholders::_1, std::placeholders::_2);
+        mRecvCB = std::bind(handleRecieve, pBaseType, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3);
+        mEventCB = std::bind(handleEvent, pBaseType, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3);
         //mstrIP = "";
         mnPort = 0;
         mnCpuCount = 0;

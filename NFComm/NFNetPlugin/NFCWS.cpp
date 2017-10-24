@@ -93,7 +93,7 @@ bool NFCWS::SendMsgToAllClient(const char * msg, const uint32_t nLen)
 		{
 			try
 			{
-				m_EndPoint.send(it->first, msg, nLen, websocketpp::frame::opcode::TEXT);
+				m_EndPoint.send(it->first, msg, nLen, websocketpp::frame::opcode::BINARY);
 			}
 			catch (websocketpp::exception& e)
 			{
@@ -116,7 +116,7 @@ bool NFCWS::SendMsgToClient(const char * msg, const uint32_t nLen, const std::ve
 		{
 			try
 			{
-				m_EndPoint.send(vIt, msg, nLen, websocketpp::frame::opcode::TEXT);
+				m_EndPoint.send(vIt, msg, nLen, websocketpp::frame::opcode::BINARY);
 				return true;
 			}
 			catch (websocketpp::exception& e)
@@ -136,7 +136,7 @@ bool NFCWS::SendMsgToClient(const char * msg, const uint32_t nLen, websocketpp::
 	{
 		try
 		{
-			m_EndPoint.send(hd, msg, nLen, websocketpp::frame::opcode::TEXT);
+			m_EndPoint.send(hd, msg, nLen, websocketpp::frame::opcode::BINARY);
 			return true;
 		}
 		catch (websocketpp::exception& e)
@@ -209,7 +209,7 @@ void NFCWS::OnMessageHandler(websocketpp::connection_hdl hd, NFWebSockConf::mess
 
 	if (mRecvCB)
 	{
-		mRecvCB(hd,msg->get_payload());
+		mRecvCB(hd,msg->get_payload(), pObject);
 	}
 }
 
@@ -220,7 +220,7 @@ void NFCWS::OnOpenHandler(websocketpp::connection_hdl hd)
 	{
 		if (mEventCB)
 		{
-			mEventCB(hd, NF_WS_EVENT_OPEN);
+			mEventCB(hd, NF_WS_EVENT_OPEN, pWSObject);
 		}
 	}
 }
@@ -231,6 +231,7 @@ bool NFCWS::RemoveConnection(websocketpp::connection_hdl hd, NF_WS_EVENT evt, in
 	if (it != mmObject.end())
 	{
 		mvRemoveObject.push_back(hd);
+        mmObject.erase(it);
 		return true;
 	}
 	return false;
@@ -238,17 +239,32 @@ bool NFCWS::RemoveConnection(websocketpp::connection_hdl hd, NF_WS_EVENT evt, in
 
 void NFCWS::OnCloseHandler(websocketpp::connection_hdl hd)
 {
+    auto pObject = GetNetObject(hd);
+    if(!pObject)
+        return;
 	RemoveConnection(hd, NF_WS_EVENT_CLOSE);
+	if(mEventCB)
+        mEventCB(hd, NF_WS_EVENT_CLOSE, pObject);
 }
 
 void NFCWS::OnFailHandler(websocketpp::connection_hdl hd)
 {
+    auto pObject = GetNetObject(hd);
+    if(!pObject)
+        return;
 	RemoveConnection(hd, NF_WS_EVENT_FAIL);
+    if(mEventCB)
+        mEventCB(hd, NF_WS_EVENT_FAIL, pObject);
 }
 
 void NFCWS::OnInterruptHandler(websocketpp::connection_hdl hd)
 {
+    auto pObject = GetNetObject(hd);
+    if(!pObject)
+        return;
 	RemoveConnection(hd, NF_WS_EVENT_INTERRUPT);
+    if(mEventCB)
+        mEventCB(hd, NF_WS_EVENT_INTERRUPT, pObject);
 }
 
 bool NFCWS::OnPongHandler(websocketpp::connection_hdl hd, std::string str)
@@ -258,5 +274,10 @@ bool NFCWS::OnPongHandler(websocketpp::connection_hdl hd, std::string str)
 
 void NFCWS::OnPongTimeOutHandler(websocketpp::connection_hdl hd, std::string str)
 {
+    auto pObject = GetNetObject(hd);
+    if(!pObject)
+        return;
 	RemoveConnection(hd, NF_WS_EVENT_PONG_TIMEOUT);
+    if(mEventCB)
+        mEventCB(hd, NF_WS_EVENT_PONG_TIMEOUT, pObject);
 }
