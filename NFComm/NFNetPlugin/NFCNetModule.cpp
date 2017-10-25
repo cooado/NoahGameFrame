@@ -118,7 +118,7 @@ bool NFCNetModule::SendMsgPB(const uint16_t nMsgID, const google::protobuf::Mess
 	if (!xData.SerializeToString(xMsg.mutable_msg_data()))
 	{
 		char szData[MAX_PATH] = { 0 };
-		NFSPRINTF(szData, MAX_PATH, "Send Message to %d Failed For Serialize of MsgData, MessageID: %d\n", nSockIndex, nMsgID);
+		NFSPRINTF(szData, MAX_PATH, "Send Message to %d Failed For Serialize of MessagePtr, MessageID: %d\n", nSockIndex, nMsgID);
 
 		return false;
 	}
@@ -146,7 +146,7 @@ bool NFCNetModule::SendMsgPBToAllClient(const uint16_t nMsgID, const google::pro
 	if (!xData.SerializeToString(xMsg.mutable_msg_data()))
 	{
 		char szData[MAX_PATH] = { 0 };
-		NFSPRINTF(szData, MAX_PATH, "Send Message to all Failed For Serialize of MsgData, MessageID: %d\n", nMsgID);
+		NFSPRINTF(szData, MAX_PATH, "Send Message to all Failed For Serialize of MessagePtr, MessageID: %d\n", nMsgID);
 
 		return false;
 	}
@@ -180,7 +180,7 @@ bool NFCNetModule::SendMsgPB(const uint16_t nMsgID, const google::protobuf::Mess
 	if (!xData.SerializeToString(xMsg.mutable_msg_data()))
 	{
 		char szData[MAX_PATH] = { 0 };
-		NFSPRINTF(szData, MAX_PATH, "Send Message to %d Failed For Serialize of MsgData, MessageID: %d\n", nSockIndex, nMsgID);
+		NFSPRINTF(szData, MAX_PATH, "Send Message to %d Failed For Serialize of MessagePtr, MessageID: %d\n", nSockIndex, nMsgID);
 
 		return false;
 	}
