@@ -52,7 +52,7 @@
     	<ConfigPath Name="../" />		
 	</WorldServer>
 	
-	<TutorialServer>
+	<MatchServer>
 		<Plugin Name="NFNetPlugin" />
 		<Plugin Name="NFKernelPlugin" />
 		<Plugin Name="NFConfigPlugin" />
@@ -60,5 +60,5 @@
 		<Plugin Name="NFActorPlugin" />
 		<Plugin Name="Zone" />
     	<ConfigPath Name="../" />		
-	</TutorialServer>
+	</MatchServer>
 </XML>
