@@ -196,7 +196,13 @@ bool NFCWS::CloseSocketAll()
 
 void NFCWS::CloseObject(websocketpp::connection_hdl hd, int nCloseCode/* =1000 */, const std::string& strCloseReason/* ="" */)
 {
-	m_EndPoint.close(hd, nCloseCode, strCloseReason);
+	// close会抛异常，所以try-catch一下
+	try{
+		m_EndPoint.close(hd, nCloseCode, strCloseReason);
+	}
+	catch(websocketpp::exception e){
+		std::cout<<"websocket exception when close object: " << e.what() << std::endl;
+	}
 }
 
 void NFCWS::OnMessageHandler(websocketpp::connection_hdl hd, NFWebSockConf::message_ptr msg)
