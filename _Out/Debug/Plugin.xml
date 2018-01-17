@@ -61,4 +61,14 @@
 		<Plugin Name="Zone" />
     	<ConfigPath Name="../" />		
 	</MatchServer>
+	
+        <RoleServer>
+		<Plugin Name="NFNetPlugin" />
+		<Plugin Name="NFKernelPlugin" />
+		<Plugin Name="NFConfigPlugin" />
+		<Plugin Name="NFLogPlugin" />
+		<Plugin Name="NFActorPlugin" />
+		<Plugin Name="Role" />
+    	<ConfigPath Name="../" />		
+	</RoleServer>
 </XML>
