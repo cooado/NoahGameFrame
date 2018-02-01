@@ -1,8 +1,8 @@
 {
-    "MatchConfig":{
+    "MatchMainConfig":{
         "1": {"ks_id": "1", "s_ip": "127.0.0.1", "i_port": 8800, "s_role_id": "100"}
     },
-    "RoleConfig":{
+    "RoleMainConfig":{
         "100": {"ks_id": "100", "s_ip": "127.0.0.1", "i_port": 8900}
     }
 }
