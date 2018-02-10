@@ -1,0 +1,22 @@
+{
+    "Monster":{
+        "1": {"k_id": 1, "i_shape": 1, "i_hp": 10},
+        "2": {"k_id": 2, "i_shape": 2, "i_hp": 1, "il_eEff": [2,1]}
+    },
+    "Trigger":{
+        "1": {"i_id": 1, "i_shape": 2, "i_cnt": 1, "i_lastFrames": 1, "il_cEff": [2,1]}
+    },
+    "Quest":{
+        "1000": {"k_id": 1000, "i_type": 1, "i_next": 90000000, "il_trigger_cond1": [1, 1], "il_enter_evt": [1, 1000], "il_params": [1, 1, 100, 1], "il_rwds": [1, 1, 1000], "il_finish_evt_1": [1, 1000], "il_finish_evt_2": [2]},
+        "2000": {"k_id": 2000, "i_type": 2, "i_next": 90000000, "il_trigger_cond1": [1, 1], "il_enter_evt": [1, 1000], "il_params": [1, 1, 100, 1], "il_rwds": [1, 2, 1000], "il_finish_evt_1": [1, 1000], "il_finish_evt_2": [2]}
+    },
+    "Item":{
+        "100": {"k_id": 100, "i_type": 1, "t_name": "item 1"}
+    },
+    "Dialog":{
+        "1001": {"k_id": 1001, "tl_contents": ["1", "aaaa", "0", "bbbb"]}
+    },
+    "Npc":{
+        "1": {"k_id": 1, "t_name": "girl"}
+    }
+}
