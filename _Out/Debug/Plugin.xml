@@ -58,7 +58,6 @@
 		<Plugin Name="NFConfigPlugin" />
 		<Plugin Name="NFLogPlugin" />
 		<Plugin Name="NFActorPlugin" />
-		<Plugin Name="NFNoSqlPlugin" />
 		<Plugin Name="Match" />
     	<ConfigPath Name="../" />
 	</MatchServer>
@@ -69,7 +68,6 @@
 		<Plugin Name="NFConfigPlugin" />
 		<Plugin Name="NFLogPlugin" />
 		<Plugin Name="NFActorPlugin" />
-		<Plugin Name="NFNoSqlPlugin" />
 		<Plugin Name="Role" />
     	<ConfigPath Name="../" />		
 	</RoleServer>
