@@ -78,3 +78,5 @@
 /Dependencies/curl
 /.vs/
 /NoahFrame.VC.db
+_Out/ServerSchema.json
+_Out/Debug/log
