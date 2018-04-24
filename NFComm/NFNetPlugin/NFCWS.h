@@ -46,13 +46,12 @@ public:
     virtual bool AddNetObject(websocketpp::connection_hdl conn,WSObjectPtr pObject);
     virtual WSObjectPtr GetNetObject(websocketpp::connection_hdl conn);
 
+	void CloseObject(websocketpp::connection_hdl hd, int nCloseCode=1000, const std::string& strCloseReason="");
 private:
     void ExecuteClose();
 
 	bool CloseSocketAll();
-	
-    void CloseObject(websocketpp::connection_hdl hd, int nCloseCode=1000, const std::string& strCloseReason="");
-	
+
 	void OnMessageHandler(websocketpp::connection_hdl hd, NFWebSockConf::message_ptr msg);
 	void OnOpenHandler(websocketpp::connection_hdl hd);
 	bool RemoveConnection(websocketpp::connection_hdl hd, NF_WS_EVENT evt, int nCloseCode = 1000, const std::string& strCloseReason = "");
