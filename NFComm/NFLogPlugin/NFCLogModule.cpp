@@ -154,7 +154,7 @@ bool NFCLogModule::Log(const NF_LOG_LEVEL nll, const char* format, ...)
         case NFILogModule::NLL_INFO_NORMAL:
 			{
 				std::cout << termcolor::green;
-				LOG(INFO) << mnLogCountTotal << " | " << pPluginManager->GetAppID() << " | " << szBuffer;
+				LOG(INFO) << szBuffer;
 			}	
 			break;
         case NFILogModule::NLL_WARING_NORMAL:
@@ -166,7 +166,7 @@ bool NFCLogModule::Log(const NF_LOG_LEVEL nll, const char* format, ...)
         case NFILogModule::NLL_ERROR_NORMAL:
 			{
 				std::cout << termcolor::red;
-				LOG(ERROR) << mnLogCountTotal << " | " << pPluginManager->GetAppID() << " | " << szBuffer;
+				LOG(ERROR) << szBuffer;
 				//LogStack();
 			}
 			break;
@@ -323,7 +323,8 @@ bool NFCLogModule::LogNormal(const NF_LOG_LEVEL nll, const NFGUID ident, const s
 {
     if (line > 0)
     {
-        Log(nll, "Indent[%s] %s %s %d", ident.ToString().c_str(), stream.str().c_str(), func, line);
+//        Log(nll, "Indent[%s] %s %s %d", ident.ToString().c_str(), stream.str().c_str(), func, line);
+        Log(nll, "%s %s %d", stream.str().c_str(), func, line);
     }
     else
     {
