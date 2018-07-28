@@ -1,12 +1,5 @@
-// -------------------------------------------------------------------------
-//    @FileName			:		NFCWSNoTLS.h
-//    @Author			:		Stone.xin
-//    @Date				:		2016-12-22
-//    @Module			:		NFCWSNoTLS
-// -------------------------------------------------------------------------
-
-#ifndef NFC_WS_H
-#define NFC_WS_H
+#ifndef NFC_WS_NO_TLS_H
+#define NFC_WS_NO_TLS_H
 
 #include "NFIWS.h"
 
@@ -88,4 +81,4 @@ private:
 
 #pragma pack(pop)
 
-#endif
+#endif // NFC_WS_NO_TLS_H
