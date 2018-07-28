@@ -156,6 +156,8 @@ public:
 
 	//send a message to client list
 	virtual bool SendMsgToClient(const char* msg, const uint32_t nLen, websocketpp::connection_hdl) = 0;
+
+    virtual void CloseObject(websocketpp::connection_hdl hd, int nCloseCode=1000, const std::string& strCloseReason="") = 0;
 };
 
 #endif

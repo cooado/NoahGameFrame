@@ -45,7 +45,7 @@ public:
     virtual bool AddNetObject(websocketpp::connection_hdl conn,WSObjectPtr pObject);
     virtual WSObjectPtr GetNetObject(websocketpp::connection_hdl conn);
 
-	void CloseObject(websocketpp::connection_hdl hd, int nCloseCode=1000, const std::string& strCloseReason="");
+	virtual void CloseObject(websocketpp::connection_hdl hd, int nCloseCode=1000, const std::string& strCloseReason="");
 private:
 	typedef websocketpp::lib::shared_ptr<websocketpp::lib::asio::ssl::context> context_ptr;
 
