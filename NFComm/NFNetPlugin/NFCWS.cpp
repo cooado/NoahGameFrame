@@ -297,7 +297,7 @@ void NFCWS::OnHttp(websocketpp::connection_hdl hdl) {
 	con->set_status(websocketpp::http::status_code::ok);
 }
 
-NFCWS::context_ptr NFCWS::OnTlsInit(tls_mode mode, websocketpp::connection_hdl hdl) {
+NFCWS::context_ptr NFCWS::OnTlsInit(NFCWS::tls_mode mode, websocketpp::connection_hdl hdl) {
 	namespace asio = websocketpp::lib::asio;
 
 	std::cout << "on_tls_init called with hdl: " << hdl.lock().get() << std::endl;

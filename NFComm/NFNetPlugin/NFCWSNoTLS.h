@@ -1,8 +1,8 @@
 // -------------------------------------------------------------------------
-//    @FileName			:		NFCWS.h
+//    @FileName			:		NFCWSNoTLS.h
 //    @Author			:		Stone.xin
 //    @Date				:		2016-12-22
-//    @Module			:		NFCWS
+//    @Module			:		NFCWSNoTLS
 // -------------------------------------------------------------------------
 
 #ifndef NFC_WS_H
@@ -12,19 +12,11 @@
 
 #pragma pack(push, 1)
 
-
-class NFCWS : public NFIWS
+class NFCWSNoTLS : public NFIWS
 {
 public:
-// See https://wiki.mozilla.org/Security/Server_Side_TLS for more details about
-// the TLS modes. The code below demonstrates how to implement both the modern
-    enum tls_mode {
-        MOZILLA_INTERMEDIATE = 1,
-        MOZILLA_MODERN = 2
-    };
-
     template<typename BaseType>
-	NFCWS(BaseType* pBaseType, void (BaseType::*handleRecieve)(websocketpp::connection_hdl, const std::string&, WSObjectPtr), void (BaseType::*handleEvent)(websocketpp::connection_hdl, NF_WS_EVENT, WSObjectPtr))
+	NFCWSNoTLS(BaseType* pBaseType, void (BaseType::*handleRecieve)(websocketpp::connection_hdl, const std::string&, WSObjectPtr), void (BaseType::*handleEvent)(websocketpp::connection_hdl, NF_WS_EVENT, WSObjectPtr))
     {
         mRecvCB = std::bind(handleRecieve, pBaseType, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3);
         mEventCB = std::bind(handleEvent, pBaseType, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3);
@@ -37,7 +29,7 @@ public:
         mnSendMsgTotal = 0;
         mnReceiveMsgTotal = 0;
     }
-    virtual ~NFCWS() {};
+    virtual ~NFCWSNoTLS() {};
 
 public:
     virtual bool Execute();
@@ -69,8 +61,6 @@ private:
 	bool OnPongHandler(websocketpp::connection_hdl hd, std::string str);
 	void OnPongTimeOutHandler(websocketpp::connection_hdl hd, std::string str);
 	void OnHttp(websocketpp::connection_hdl hdl);
-	context_ptr OnTlsInit(tls_mode mode, websocketpp::connection_hdl hdl);
-	std::string GetPassword();
 
 private:
     //<fd,object>
@@ -87,7 +77,7 @@ private:
     int64_t mnSendMsgTotal;
     int64_t mnReceiveMsgTotal;
 
-	NFWebSockConf	m_EndPoint;
+	NFWebSockConfNoTLS	m_EndPoint;
     //////////////////////////////////////////////////////////////////////////
 
 	NF_WS_MSG_CALL_BACK mRecvCB;
