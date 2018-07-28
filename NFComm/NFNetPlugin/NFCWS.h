@@ -13,6 +13,13 @@
 #pragma pack(push, 1)
 
 
+// See https://wiki.mozilla.org/Security/Server_Side_TLS for more details about
+// the TLS modes. The code below demonstrates how to implement both the modern
+enum tls_mode {
+	MOZILLA_INTERMEDIATE = 1,
+	MOZILLA_MODERN = 2
+};
+
 class NFCWS : public NFIWS
 {
 public:
@@ -48,8 +55,9 @@ public:
 
 	void CloseObject(websocketpp::connection_hdl hd, int nCloseCode=1000, const std::string& strCloseReason="");
 private:
-    void ExecuteClose();
+	typedef websocketpp::lib::shared_ptr<websocketpp::lib::asio::ssl::context> context_ptr;
 
+	void ExecuteClose();
 	bool CloseSocketAll();
 
 	void OnMessageHandler(websocketpp::connection_hdl hd, NFWebSockConf::message_ptr msg);
@@ -60,6 +68,9 @@ private:
 	void OnInterruptHandler(websocketpp::connection_hdl hd);
 	bool OnPongHandler(websocketpp::connection_hdl hd, std::string str);
 	void OnPongTimeOutHandler(websocketpp::connection_hdl hd, std::string str);
+	void OnHttp(websocketpp::connection_hdl hdl);
+	context_ptr OnTlsInit(tls_mode mode, websocketpp::connection_hdl hdl);
+	std::string GetPassword();
 
 private:
     //<fd,object>

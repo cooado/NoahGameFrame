@@ -1,5 +1,7 @@
 set(ProjectName "NFNetPlugin")
 
+include(FindOpenSSL)
+
 file(GLOB NFNet_ROOT_Cpp *.cpp)
 file(GLOB NFNet_ROOT_Hpp *.h)
 

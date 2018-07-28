@@ -19,12 +19,13 @@
 #define ASIO_STANDALONE
 #define _WEBSOCKETPP_CPP11_STL_
 
-#include <websocketpp/config/asio_no_tls.hpp>
+//#include <websocketpp/config/asio_no_tls.hpp>
+#include <websocketpp/config/asio.hpp>
 #include <websocketpp/server.hpp>
 
-struct NF_WS_CONFIG : public websocketpp::config::asio {
+struct NF_WS_CONFIG : public websocketpp::config::asio_tls {
 	// pull default settings from our core config
-	typedef websocketpp::config::asio core;
+	typedef websocketpp::config::asio_tls core;
 
 	typedef core::concurrency_type concurrency_type;
 	typedef core::request_type request_type;
