@@ -37,6 +37,21 @@ public:
         mnSendMsgTotal = 0;
         mnReceiveMsgTotal = 0;
     }
+
+    template<typename BaseType>
+    NFCWS(BaseType* pBaseType, websocketpp::http::status_code (BaseType::*handleHttp)(const string&, const string&, string&))
+    {
+        mHttpCB = std::bind(handleHttp, pBaseType, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3);
+
+        mnPort = 0;
+        mnCpuCount = 0;
+
+        mbWorking = false;
+        
+        mnSendMsgTotal = 0;
+        mnReceiveMsgTotal = 0;
+    }
+
     virtual ~NFCWS() {};
 
 public:
@@ -92,7 +107,7 @@ private:
 
 	NF_WS_MSG_CALL_BACK mRecvCB;
 	NF_WS_EVENT_CALL_BACK mEventCB;
-
+    NF_WS_HTTP_CALL_BACK mHttpCB;
     //////////////////////////////////////////////////////////////////////////
 };
 
