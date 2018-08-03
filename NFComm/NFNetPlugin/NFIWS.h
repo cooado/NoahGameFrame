@@ -136,7 +136,7 @@ typedef std::shared_ptr<NF_WS_MSG_CALL_BACK> NF_WS_MSG_CALL_BACK_PTR;
 typedef std::function<void(websocketpp::connection_hdl,NF_WS_EVENT, WSObjectPtr) > 					NF_WS_EVENT_CALL_BACK;
 typedef std::shared_ptr<NF_WS_EVENT_CALL_BACK> NF_WS_EVENT_CALL_BACK_PTR;
 
-typedef std::function<websocketpp::http::status_code(const string&, const string&, string&)> NF_WS_HTTP_CALL_BACK;
+typedef std::function<websocketpp::http::status_code::value(const string&, const string&, string&)> NF_WS_HTTP_CALL_BACK;
 
 class NFIWS
 {

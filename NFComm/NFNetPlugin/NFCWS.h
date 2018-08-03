@@ -39,7 +39,7 @@ public:
     }
 
     template<typename BaseType>
-    NFCWS(BaseType* pBaseType, websocketpp::http::status_code (BaseType::*handleHttp)(const string&, const string&, string&))
+    NFCWS(BaseType* pBaseType, websocketpp::http::status_code::value (BaseType::*handleHttp)(const string&, const string&, string&))
     {
         mHttpCB = std::bind(handleHttp, pBaseType, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3);
 
