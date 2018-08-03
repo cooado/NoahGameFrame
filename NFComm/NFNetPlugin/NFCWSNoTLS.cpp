@@ -290,8 +290,16 @@ void NFCWSNoTLS::OnPongTimeOutHandler(websocketpp::connection_hdl hd, std::strin
 }
 
 void NFCWSNoTLS::OnHttp(websocketpp::connection_hdl hdl) {
-	NFWebSockConfNoTLS::connection_ptr con = m_EndPoint.get_con_from_hdl(hdl);
+	auto con = m_EndPoint.get_con_from_hdl(hdl);
 
-	con->set_body("Hello World!");
-	con->set_status(websocketpp::http::status_code::ok);
+	if(mHttpCB){
+		std::string response;
+		auto retCode = mHttpCB(con->get_resource(), con->get_request_body(), response);
+
+		con->set_body(response);
+		con->set_status(retCode);
+	}
+	else{
+		con->set_status(websocketpp::http::status_code::ok);
+	}
 }
