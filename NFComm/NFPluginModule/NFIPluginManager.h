@@ -77,6 +77,9 @@ public:
 
 	virtual void SetGetFileContentFunctor(GET_FILECONTENT_FUNCTOR fun) = 0;
 	virtual bool GetFileContent(const std::string &strFileName, std::string &strContent) = 0;
+
+	virtual void setEnableTls(bool enable_) = 0;
+	virtual bool getEnableTls() const = 0;
 };
 
 #endif

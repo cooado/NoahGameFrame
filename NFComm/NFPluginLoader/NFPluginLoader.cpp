@@ -223,6 +223,21 @@ void ProcessParameter(int argc, char* argv[])
         }
 	}
 
+	// tls setting
+	string tls;
+	if(strArgvList.find("TLS=") != string::npos){
+		for(int i = 0; i < argc; ++i){
+			tls = argv[i];
+			if(tls.find("TLS=") != string::npos){
+				tls.erase(0, 4);
+				break;
+			}
+		}
+	}
+	if(tls.size() > 0 && tls == "no"){
+		NFCPluginManager::GetSingletonPtr()->setEnableTls(false);
+	}
+
 	strTitleName = strAppName + strAppID;// +" PID" + NFGetPID();
 	strTitleName.replace(strTitleName.find("Server"), 6, "");
 	strTitleName = "NF" + strTitleName;

@@ -85,6 +85,13 @@ public:
 
 	virtual bool GetFileContent(const std::string &strFileName, std::string &strContent);
 
+	void setEnableTls(bool enable_) override {
+		_enableTls = enable_;
+	}
+
+	bool getEnableTls() const override {
+		return _enableTls;
+	}
 protected:
 	bool LoadPluginConfig();
 
@@ -101,6 +108,7 @@ private:
 	std::string mstrConfigName;
 	std::string mstrAppName;
 	std::string mstrLogConfigName;
+	bool _enableTls = true;
 
     typedef std::map<std::string, bool> PluginNameMap;
     typedef std::map<std::string, NFCDynLib*> PluginLibMap;
