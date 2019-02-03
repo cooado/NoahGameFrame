@@ -70,6 +70,7 @@
 /_Out/Server/NFDataCfg/Proto/
 #/_Out/Server/Release/
 /_Out/Debug/*_d
+/_Out/Debug/*_unittest
 /_Out/NFDataCfg
 /_Out/Release/NFPluginLoader
 
